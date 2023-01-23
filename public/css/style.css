@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	height: 100%;
+}
+
+body,
+button,
+input {
+	margin: 0;
+	font-family: Figtree;
+}
+.lan-body {
+	@apply bg-[#0f0f0f] px-20 pt-5 rounded-bl-[40px] rounded-br-[40px];
+}
+.lan-head {
+	@apply bg-[#222] px-5 py-4 flex rounded-xl;
+}
+.lan-btn {
+	@apply ml-auto;
+}
+.btn-common {
+	@apply py-[15px] px-[30px]  font-semibold text-base rounded-full leading-[19px];
+}
+.login {
+	@apply bg-[#2c2c2c]  text-white;
+}
+.create-link {
+	@apply bg-[#fff] text-[#0f0f0f] ml-3;
+}
+.land-head {
+	@apply mt-[100px];
+}
+.land-head h1 {
+	@apply text-center font-bold text-[90px] text-white leading-[99px];
+}
+.land-head p {
+	@apply text-[24px] text-center font-semibold  text-white mt-6 leading-[33.3px] md:w-[708px] m-auto;
+}
+.profile-cre {
+	@apply flex items-center justify-center gap-3 mt-[48px] pb-[64px];
+}
+.profile-input {
+	@apply w-[380px] border-solid border-[rgba(255,255,255,0.5)] rounded-full py-5 px-5 border;
+}
+.profile-input span {
+	@apply text-[rgba(255,255,255,0.35)] font-semibold text-base;
+}
+.profile-input input {
+	@apply bg-transparent outline-none w-[245px] text-white text-base font-semibold;
+}
+.land-claim button {
+	@apply bg-[#ffed5d] rounded-full px-6 py-[21px] text-[#0f0f0f] text-base font-bold leading-[22px];
+}
+
+::placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/* h1 animation zoom-in */
+.zoo-in {
+	animation-duration: 5s;
+	animation-fill-mode: both;
+}
+.zoo-in-i {
+	animation-duration: 6s;
+	animation-fill-mode: both;
+}
+.zoom-in-b {
+	animation-duration: 6s;
+	animation-fill-mode: both;
+}
+.zoom-in-b {
+	animation-name: zoomInLeft;
+}
+.zoo-in-i {
+	animation-name: zoomInLeft;
+}
+.zoo-in {
+	animation-name: zoomInLeft;
+}
+
+@keyframes zoomInLeft {
+	from {
+		transform: scale(-0) translateX(-10%);
+		opacity: 0;
+	}
+}
+/* link animation */
+.land-head span {
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+	from {
+		-webkit-filter: hue-rotate(0deg);
+	}
+	to {
+		-webkit-filter: hue-rotate(-360deg);
+	}
+}
