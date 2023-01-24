@@ -55,22 +55,82 @@ input {
 .land-claim button {
 	@apply bg-[#ffed5d] rounded-full px-6 py-[21px] text-[#0f0f0f] text-base font-bold leading-[22px];
 }
-
 ::placeholder {
 	color: rgba(255, 255, 255, 0.5);
 }
+.landmillions {
+	@apply mt-[369px];
+}
+.landmillions ul li h2 {
+	@apply text-center font-bold text-white text-[90px] leading-[90px];
+}
+.landmillions ul li span {
+	@apply text-center font-bold text-[#f5507d] text-[90px] leading-[90px];
+}
+.landmillions ul li p {
+	@apply text-center font-semibold text-white text-[24px] pt-4;
+}
 
+.landmillions {
+	@apply h-[420px] top-[50%] relative overflow-hidden;
+	transform: translateY(-50%);
+}
+.landmillions ul {
+	@apply float-left h-[50%] relative top-[50%];
+	width: calc(400px * 10);
+	transform: translateY(-50%);
+}
+.landmillions ul li {
+	@apply float-left cursor-pointer;
+	margin: 0 250px;
+}
+.landmillions ul li:first-of-type {
+	@apply ml-[700px];
+}
+.land-influ {
+	@apply mt-[73px] mx-[100px];
+}
+.land-vlog {
+	@apply flex w-full gap-10;
+}
+.land-a {
+	@apply w-full;
+}
+.land-a span {
+	@apply text-[#0f0f0f] text-[60px] font-bold;
+}
+.land-a button {
+	@apply bg-[rgba(26,97,233,0.1)] px-[32px] py-4 text-[#1a61e9] text-[60px] font-bold rounded-full ml-3 leading-[66px];
+}
+.land-a p {
+	@apply text-2xl pt-[32px] font-semibold text-[#0f0f0f];
+}
+.land-vloger {
+	@apply bg-[#ffa42b] rounded-[40px] w-full;
+}
+.land-vloger img {
+	@apply m-auto;
+}
+.land-lin {
+	@apply mt-[278px];
+}
+.land-lin span {
+	@apply text-[40px] font-bold text-[#0f0f0f];
+}
+.land-lin p {
+	@apply text-base font-medium text-[rgba(15,15,15,0.7)] pt-[7px];
+}
 /* h1 animation zoom-in */
 .zoo-in {
-	animation-duration: 5s;
+	animation-duration: 3s;
 	animation-fill-mode: both;
 }
 .zoo-in-i {
-	animation-duration: 6s;
+	animation-duration: 3s;
 	animation-fill-mode: both;
 }
 .zoom-in-b {
-	animation-duration: 6s;
+	animation-duration: 3s;
 	animation-fill-mode: both;
 }
 .zoom-in-b {
@@ -89,7 +149,7 @@ input {
 		opacity: 0;
 	}
 }
-/* link animation */
+/* link text animation */
 .land-head span {
 	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
 	-webkit-background-clip: text;
@@ -104,4 +164,88 @@ input {
 	to {
 		-webkit-filter: hue-rotate(-360deg);
 	}
+}
+
+/* button animation */
+
+.land-claim button:hover {
+	background-position: 100% 0;
+	moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.land-claim button {
+	moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	background-size: 300% 100%;
+}
+.land-claim button {
+	background-image: linear-gradient(
+		to right,
+		#edd834,
+		#c7b61c,
+		#ffed5d,
+		#d9e021
+	);
+}
+.carousel {
+	width: 100%;
+	cursor: -webkit-grab;
+	cursor: grab;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 269px;
+	padding-bottom: 269px;
+}
+.carousel.dragging {
+	cursor: -webkit-grabbing;
+	cursor: grabbing;
+}
+.carousel--wrap {
+	white-space: nowrap;
+}
+.carousel--item {
+	display: inline-block;
+	width: 45vw;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin: 0 100px;
+}
+.carousel--item div {
+	position: relative;
+	z-index: 1;
+	display: block;
+	height: 0;
+	padding-bottom: 37%;
+	overflow: hidden;
+}
+.carousel--item div h2 {
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	vertical-align: middle;
+	transform-origin: center;
+	font-size: 90px;
+	color: white;
+	font-weight: bold;
+	line-height: 90px;
+	text-align: center;
+}
+
+.carousel--item div span {
+	color: #f5507d;
+	line-height: 90px;
+}
+.carousel--item div p {
+	@apply text-center font-semibold text-white text-[24px] pt-4;
 }
