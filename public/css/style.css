@@ -13,6 +13,8 @@ input {
 	margin: 0;
 	font-family: Figtree;
 }
+
+/* header section */
 .lan-body {
 	@apply bg-[#0f0f0f] px-20 pt-5 rounded-bl-[40px] rounded-br-[40px];
 }
@@ -31,6 +33,8 @@ input {
 .create-link {
 	@apply bg-[#fff] text-[#0f0f0f] ml-3;
 }
+
+/* header 2 section */
 .land-head {
 	@apply mt-[100px];
 }
@@ -40,6 +44,8 @@ input {
 .land-head p {
 	@apply text-[24px] text-center font-semibold  text-white mt-6 leading-[33.3px] md:w-[708px] m-auto;
 }
+
+/* input section */
 .profile-cre {
 	@apply flex items-center justify-center gap-3 mt-[48px] pb-[64px];
 }
@@ -58,35 +64,32 @@ input {
 ::placeholder {
 	color: rgba(255, 255, 255, 0.5);
 }
-.landmillions {
-	@apply mt-[369px];
+
+/* section 2 body */
+
+.sticky-parent {
+	@apply h-[500vh] -mx-20;
 }
-.landmillions ul li h2 {
+.stickyin {
+	@apply sticky top-0 h-[600px] overflow-x-hidden overflow-y-hidden;
+}
+.dim {
+	@apply min-w-[100vw] h-full  w-full flex justify-center items-center;
+}
+.horizontal {
+	@apply flex h-full w-full;
+}
+.dim h2 {
 	@apply text-center font-bold text-white text-[90px] leading-[90px];
 }
-.landmillions ul li span {
+.dim span {
 	@apply text-center font-bold text-[#f5507d] text-[90px] leading-[90px];
 }
-.landmillions ul li p {
-	@apply text-center font-semibold text-white text-[24px] pt-4;
+.dim p {
+	@apply text-center font-semibold text-white text-[24px] pt-4 leading-[33.3px];
 }
 
-.landmillions {
-	@apply h-[420px] top-[50%] relative overflow-hidden;
-	transform: translateY(-50%);
-}
-.landmillions ul {
-	@apply float-left h-[50%] relative top-[50%];
-	width: calc(400px * 10);
-	transform: translateY(-50%);
-}
-.landmillions ul li {
-	@apply float-left cursor-pointer;
-	margin: 0 250px;
-}
-.landmillions ul li:first-of-type {
-	@apply ml-[700px];
-}
+/* section three part */
 .land-influ {
 	@apply mt-[73px] mx-[100px];
 }
@@ -105,12 +108,32 @@ input {
 .land-a p {
 	@apply text-2xl pt-[32px] font-semibold text-[#0f0f0f];
 }
+
+/* right side image */
 .land-vloger {
-	@apply bg-[#ffa42b] rounded-[40px] w-full;
+	@apply bg-[#ffa42b] rounded-[40px] w-full relative;
 }
+
 .land-vloger img {
 	@apply m-auto;
 }
+.man-pic img {
+	@apply absolute left-[114px] right-0 top-[-45px];
+}
+.speaker-pic img {
+	@apply absolute right-[140px] left-0 top-[44px];
+}
+.camera-pic {
+	@apply relative;
+}
+.camera-pic img {
+	@apply absolute bottom-[54px] right-[64px];
+}
+.list-pic img {
+	@apply absolute top-[26%] left-[3px] right-0;
+}
+
+/* left side text section */
 .land-lin {
 	@apply mt-[278px];
 }
@@ -120,6 +143,7 @@ input {
 .land-lin p {
 	@apply text-base font-medium text-[rgba(15,15,15,0.7)] pt-[7px];
 }
+
 /* h1 animation zoom-in */
 .zoo-in {
 	animation-duration: 3s;
@@ -128,13 +152,6 @@ input {
 .zoo-in-i {
 	animation-duration: 3s;
 	animation-fill-mode: both;
-}
-.zoom-in-b {
-	animation-duration: 3s;
-	animation-fill-mode: both;
-}
-.zoom-in-b {
-	animation-name: zoomInLeft;
 }
 .zoo-in-i {
 	animation-name: zoomInLeft;
@@ -149,6 +166,7 @@ input {
 		opacity: 0;
 	}
 }
+
 /* link text animation */
 .land-head span {
 	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
@@ -191,61 +209,8 @@ input {
 		#d9e021
 	);
 }
-.carousel {
-	width: 100%;
-	cursor: -webkit-grab;
-	cursor: grab;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 269px;
-	padding-bottom: 269px;
-}
-.carousel.dragging {
-	cursor: -webkit-grabbing;
-	cursor: grabbing;
-}
-.carousel--wrap {
-	white-space: nowrap;
-}
-.carousel--item {
-	display: inline-block;
-	width: 45vw;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	margin: 0 100px;
-}
-.carousel--item div {
-	position: relative;
-	z-index: 1;
-	display: block;
-	height: 0;
-	padding-bottom: 37%;
-	overflow: hidden;
-}
-.carousel--item div h2 {
-	position: absolute;
-	z-index: 1;
-	height: 100%;
-	width: 100%;
-	-o-object-fit: cover;
-	object-fit: cover;
-	vertical-align: middle;
-	transform-origin: center;
-	font-size: 90px;
-	color: white;
-	font-weight: bold;
-	line-height: 90px;
-	text-align: center;
-}
-
-.carousel--item div span {
-	color: #f5507d;
-	line-height: 90px;
-}
-.carousel--item div p {
-	@apply text-center font-semibold text-white text-[24px] pt-4;
+canvas {
+	background: #ffa42b;
+	width: 100vw;
+	height: 100vh;
 }
