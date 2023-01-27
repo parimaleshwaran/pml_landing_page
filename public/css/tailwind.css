@@ -556,6 +556,10 @@ video {
   position: sticky;
 }
 
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 html,
 body {
   height: 100%;
@@ -795,7 +799,18 @@ input {
 }
 
 .land-a {
+  height: 660px;
   width: 100%;
+  overflow: auto;
+}
+
+.vloger-head {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .land-a span {
@@ -840,21 +855,31 @@ input {
 }
 
 .land-vloger img {
+  z-index: 10;
   margin: auto;
+}
+
+iframe.code {
+  display: block;
+  height: 0.25rem;
+  min-height: 690px;
+  width: 0.25rem;
+  min-width: 100%;
+  border-style: none;
 }
 
 .man-pic img {
   position: absolute;
-  left: 114px;
+  left: 117px;
   right: 0px;
   top: -45px;
 }
 
 .speaker-pic img {
   position: absolute;
-  right: 140px;
+  right: 161px;
   left: 0px;
-  top: 44px;
+  top: 50px;
 }
 
 .camera-pic {
@@ -864,14 +889,32 @@ input {
 .camera-pic img {
   position: absolute;
   bottom: 54px;
-  right: 64px;
+  right: 0px;
 }
 
 .list-pic img {
   position: absolute;
   top: 26%;
-  left: 3px;
-  right: 0px;
+  left: 0px;
+  right: 26px;
+}
+
+.land-vloger iframe {
+  position: absolute;
+  z-index: 10;
+}
+
+.test-vloger {
+  position: relative;
+  z-index: 10;
+  margin: auto;
+  height: auto;
+  max-width: 500px;
+  background-size: cover;
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  touch-action: none;
 }
 
 /* left side text section */
@@ -972,8 +1015,208 @@ input {
 	);
 }
 
-canvas {
-  background: #ffa42b;
-  width: 100vw;
-  height: 100vh;
+/* image zoom in animation */
+
+.man-pic img {
+  -webkit-animation: man-pic 3s ease-in;
+          animation: man-pic 3s ease-in;
+}
+
+@-webkit-keyframes man-pic {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes man-pic {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.speaker-pic img {
+  -webkit-animation: speaker-pic 3s ease-in;
+          animation: speaker-pic 3s ease-in;
+}
+
+@-webkit-keyframes speaker-pic {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes speaker-pic {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.list-pic img {
+  -webkit-animation: list-pic 6s ease-in;
+          animation: list-pic 6s ease-in;
+}
+
+@-webkit-keyframes list-pic {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes list-pic {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.camera-pic img {
+  -webkit-animation: camera-pic 2s ease-in;
+          animation: camera-pic 2s ease-in;
+}
+
+@-webkit-keyframes camera-pic {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes camera-pic {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* cursor pointer hover */
+
+.test-vloger {
+  cursor: url(https://pickmyad.com/images/logo.svg), auto;
+}
+
+/* vloger scroll overwrite */
+
+.land-a::-webkit-scrollbar {
+  width: 0px;
+}
+
+.land-a::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.land-a::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.land-a::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

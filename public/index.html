@@ -14,8 +14,7 @@
 			href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
-		<script src="./scrollanimate.js"></script>
-		<script src="./canvas.js"></script>
+		<style></style>
 	</head>
 
 	<body>
@@ -60,6 +59,7 @@
 					</a>
 				</div>
 			</div>
+
 			<div class="sticky-parent">
 				<div class="stickyin">
 					<div class="horizontal">
@@ -91,9 +91,9 @@
 		<div class="land-influ">
 			<div class="land-vlog">
 				<div class="land-a">
-					<span>I am a</span>
-					<button>vlogger</button>
-					<div>
+					<div class="vloger-head">
+						<span>I am a</span>
+						<button>vlogger</button>
 						<p>
 							Then you have an endless range of choices for a micro-landing
 							page.
@@ -106,6 +106,7 @@
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
 							cupidatat non proident.
 						</p>
+						
 					</div>
 					<!-- <div class="">
 						<span>Profile Links</span>
@@ -117,13 +118,20 @@
 					</div> -->
 				</div>
 				<div class="land-vloger">
-					<img
-						src="./images/test.png"
-						class="test-vloger"
-						height="696"
-						alt="pickmylink"
-					/>
-					<div class="">
+					<iframe
+						class="code"
+						src="./canvas.html"
+						allow="fullscreen"
+						webkitallowfullscreen="true"
+						mozallowfullscreen="true"
+						allowfullscreen="true"
+						webkit-playsinline="true"
+						scrolling="no"
+						frameborder="0"
+					></iframe>
+
+					<div class="test-vloger">
+						<img src="./images/test.png" height="696" alt="pickmylink" />
 						<div class="man-pic">
 							<img src="./images/man.png" width="308" alt="pickmylink" />
 						</div>
@@ -140,134 +148,7 @@
 				</div>
 			</div>
 		</div>
-		<canvas id="stage"></canvas>
-		<script>
-			var stage = document.querySelector("#stage"),
-				cb = stage.getBoundingClientRect(),
-				ctx = stage.getContext("2d"),
-				ratio = window.devicePixelRatio || 1,
-				mouse = {
-					x: 0,
-					y: 0,
-				},
-				dots = [],
-				wide = 18,
-				high = wide / 1.1,
-				size = 30,
-				padding = 50;
-			window.onmousemove = function (e) {
-				mouse.x = e.pageX * ratio;
-				mouse.y = e.pageY * ratio;
-			};
 
-			window.onresize = function () {
-				ctx.canvas.width = window.innerWidth * ratio;
-				ctx.canvas.height = window.innerHeight * ratio;
-				cb = stage.getBoundingClientRect();
-			};
-			window.onresize();
-
-			function create() {
-				var d = 20;
-				for (var i = -1; ++i < wide; ) {
-					var x =
-						Math.floor(((cb.width - padding * 2) / (wide - 1)) * i + padding) *
-						ratio;
-
-					for (var j = -1; ++j < high; ) {
-						var y =
-							Math.floor(
-								((cb.height - padding * 2) / (high - 1)) * j + padding
-							) * ratio;
-
-						dots.push({
-							x: x,
-							y: y,
-							ox: x,
-							oy: y,
-						});
-					}
-				}
-			}
-
-			create();
-
-			function render() {
-				// clear the canvas
-				ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-				// choose the dot color
-				ctx.fillStyle = "#fff";
-				// for each line
-				for (var i = 0; i < dots.length; i++) {
-					var s = dots[i];
-					var v = getV(s);
-					ctx.beginPath();
-					ctx.moveTo(s.x, s.y);
-					ctx.lineTo(s.x + v.x, s.y + v.y);
-					ctx.strokeStyle = "#fff";
-					ctx.lineWidth = 1 * ratio;
-					ctx.stroke();
-					ctx.closePath();
-				}
-
-				// for each dot
-				for (var i = 0; i < dots.length; i++) {
-					var s = dots[i];
-
-					var v = getV(s);
-
-					ctx.circle(s.x + v.x, s.y + v.y, s.size * ratio, true);
-					ctx.fill();
-				}
-			}
-
-			function getV(dot) {
-				var d = getDistance(dot, mouse);
-				dot.size = (200 - d) / 20;
-				dot.size = dot.size < 1 ? 1 : dot.size;
-
-				dot.angle = getAngle(dot, mouse);
-
-				return {
-					x: (d > 20 ? 20 : d) * Math.cos((dot.angle * Math.PI) / 180),
-					y: (d > 20 ? 20 : d) * Math.sin((dot.angle * Math.PI) / 180),
-				};
-			}
-
-			function getAngle(obj1, obj2) {
-				var dX = obj2.x - obj1.x;
-				var dY = obj2.y - obj1.y;
-				var angleDeg = (Math.atan2(dY, dX) / Math.PI) * 180;
-				return angleDeg;
-			}
-
-			function getDistance(obj1, obj2) {
-				var dx = obj1.x - obj2.x;
-				var dy = obj1.y - obj2.y;
-				return Math.sqrt(dx * dx + dy * dy);
-			}
-			CanvasRenderingContext2D.prototype.circle = function (x, y, r) {
-				this.beginPath();
-				this.arc(x, y, r, 0, 2 * Math.PI, false);
-				this.closePath();
-			};
-			window.requestAnimFrame = (function () {
-				return (
-					window.requestAnimationFrame ||
-					window.webkitRequestAnimationFrame ||
-					window.mozRequestAnimationFrame ||
-					function (callback) {
-						window.setTimeout(callback, 1000 / 60);
-					}
-				);
-			})();
-
-			(function animloop() {
-				render();
-
-				requestAnimationFrame(animloop);
-			})();
-		</script>
 		<script id="rendered-js">
 			"use strict";
 
@@ -294,6 +175,38 @@
 				}
 			}
 			//# sourceURL=pen.js
+		</script>
+		<!-- 3d effect animation -->
+		<script>
+			const card = document.querySelector(".test-vloger");
+			const motionMatchMedia = window.matchMedia("(prefers-reduced-motion)");
+			const THRESHOLD = 15;
+
+			/*
+			 * Read the blog post here:
+			 * https://letsbuildui.dev/articles/a-3d-hover-effect-using-css-transforms
+			 */
+			function handleHover(e) {
+				const { clientX, clientY, currentTarget } = e;
+				const { clientWidth, clientHeight, offsetLeft, offsetTop } =
+					currentTarget;
+
+				const horizontal = (clientX - offsetLeft) / clientWidth;
+				const vertical = (clientY - offsetTop) / clientHeight;
+				const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
+				const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
+
+				card.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
+			}
+
+			function resetStyles(e) {
+				card.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+			}
+
+			if (!motionMatchMedia.matches) {
+				card.addEventListener("mousemove", handleHover);
+				card.addEventListener("mouseleave", resetStyles);
+			}
 		</script>
 	</body>
 </html>

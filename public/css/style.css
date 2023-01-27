@@ -97,7 +97,10 @@ input {
 	@apply flex w-full gap-10;
 }
 .land-a {
-	@apply w-full;
+	@apply w-full h-[660px] overflow-auto;
+}
+.vloger-head {
+	@apply sticky top-0 z-10 bg-white;
 }
 .land-a span {
 	@apply text-[#0f0f0f] text-[60px] font-bold;
@@ -113,24 +116,36 @@ input {
 .land-vloger {
 	@apply bg-[#ffa42b] rounded-[40px] w-full relative;
 }
-
 .land-vloger img {
-	@apply m-auto;
+	@apply m-auto z-10;
+}
+iframe.code {
+	@apply block w-1 h-1 min-w-full min-h-[690px] border-none;
 }
 .man-pic img {
-	@apply absolute left-[114px] right-0 top-[-45px];
+	@apply absolute left-[117px] right-0 top-[-45px];
 }
 .speaker-pic img {
-	@apply absolute right-[140px] left-0 top-[44px];
+	@apply absolute right-[161px] left-0 top-[50px];
 }
 .camera-pic {
 	@apply relative;
 }
 .camera-pic img {
-	@apply absolute bottom-[54px] right-[64px];
+	@apply absolute bottom-[54px] right-0;
 }
 .list-pic img {
-	@apply absolute top-[26%] left-[3px] right-0;
+	@apply absolute top-[26%] left-0 right-[26px];
+}
+.land-vloger iframe {
+	@apply absolute z-10;
+}
+.test-vloger {
+	@apply bg-cover max-w-[500px] m-auto h-auto relative z-10;
+	transition: transform 0.1s ease;
+	transform-style: preserve-3d;
+	will-change: transform;
+	touch-action: none;
 }
 
 /* left side text section */
@@ -209,8 +224,101 @@ input {
 		#d9e021
 	);
 }
-canvas {
-	background: #ffa42b;
-	width: 100vw;
-	height: 100vh;
+
+/* image zoom in animation */
+.man-pic img {
+	animation: man-pic 3s ease-in;
+}
+@keyframes man-pic {
+	0% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	70% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.speaker-pic img {
+	animation: speaker-pic 3s ease-in;
+}
+@keyframes speaker-pic {
+	0% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	70% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.list-pic img {
+	animation: list-pic 6s ease-in;
+}
+@keyframes list-pic {
+	0% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	70% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.camera-pic img {
+	animation: camera-pic 2s ease-in;
+}
+@keyframes camera-pic {
+	0% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	70% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* cursor pointer hover */
+.test-vloger {
+	cursor: url(https://pickmyad.com/images/logo.svg), auto;
+}
+
+/* vloger scroll overwrite */
+.land-a::-webkit-scrollbar {
+	width: 0px;
+}
+.land-a::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+.land-a::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+.land-a::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }

@@ -7,10 +7,10 @@ var stage = document.querySelector("#stage"),
 		y: 0,
 	},
 	dots = [],
-	wide = 18,
+	wide = 20,
 	high = wide / 1.1,
-	size = 30,
-	padding = 50;
+	size = 0,
+	padding = 0;
 window.onmousemove = function (e) {
 	mouse.x = e.pageX * ratio;
 	mouse.y = e.pageY * ratio;
