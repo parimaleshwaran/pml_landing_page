@@ -14,6 +14,8 @@
 			height: 100vh;
 			box-sizing: border-box;
 			object-fit: none;
+			padding-bottom: 28px;
+			margin-top: 20px;
 		}
 	</style>
 	<body>
@@ -28,9 +30,9 @@
 					y: 0,
 				},
 				dots = [],
-				wide = 24,
+				wide = 20,
 				high = wide / 1.1,
-				size = 30,
+				size = 40,
 				padding = 50;
 			window.onmousemove = function (e) {
 				mouse.x = e.pageX * ratio;
@@ -106,15 +108,15 @@
 				dot.angle = getAngle(dot, mouse);
 
 				return {
-					x: (d > 20 ? 20 : d) * Math.cos((dot.angle * Math.PI) / 180),
-					y: (d > 20 ? 20 : d) * Math.sin((dot.angle * Math.PI) / 180),
+					x: (d > 10 ? 10 : d) * Math.cos((dot.angle * Math.PI) / 10),
+					y: (d > 10 ? 10 : d) * Math.sin((dot.angle * Math.PI) / 10),
 				};
 			}
 
 			function getAngle(obj1, obj2) {
 				var dX = obj2.x - obj1.x;
 				var dY = obj2.y - obj1.y;
-				var angleDeg = (Math.atan2(dY, dX) / Math.PI) * 180;
+				var angleDeg = (Math.atan2(dY, dX) / Math.PI) * 10;
 				return angleDeg;
 			}
 

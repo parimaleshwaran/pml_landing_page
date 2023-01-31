@@ -13,8 +13,10 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&display=swap"
 			rel="stylesheet"
-		/>
+			/>
 		<style></style>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -23,14 +25,12 @@
 			<div class="lan-head">
 				<img src="images/logo.svg" alt="pickmyad" class="logo-img" />
 				<div class="lan-btn">
-					<a href="https://app.pickmy.link/auth/v3/login"
-						><button class="btn-common login">Login</button></a
-					>
-					<a href="https://app.pickmy.link/auth/v3/login"
-						><button class="btn-common create-link">
+					<a href="https://app.pickmy.link/auth/v3/login"><button class="btn-common
+							login">Login</button></a>
+					<a href="https://app.pickmy.link/auth/v3/login"><button class="btn-common
+							create-link">
 							Create you free link 🎉
-						</button></a
-					>
+						</button></a>
 				</div>
 			</div>
 			<div class="land-head zoo-in">
@@ -51,7 +51,7 @@
 						autocomplete="off"
 						id="myClaim"
 						placeholder="yourname"
-					/>
+						/>
 				</div>
 				<div class="land-claim">
 					<a href="https://app.pickmy.link/auth/v3/signup">
@@ -91,14 +91,40 @@
 		<div class="land-influ">
 			<div class="land-vlog">
 				<div class="land-a">
-					<div class="vloger-head">
-						<span>I am a</span>
-						<button>vlogger</button>
-						<p>
-							Then you have an endless range of choices for a micro-landing
-							page.
-						</p>
+					<!-- <select id="myselection">
+						<option>Select Option</option>
+						<option value="One">Manager</option>
+						<option value="Two">HR</option>
+						<option value="Three">Developer</option>
+					</select>
+					<div id="showOne" class="myDiv">
+						<img src="./images/camera.png" alt="Manager" />
 					</div>
+					<div id="showTwo" class="myDiv">
+						<img src="./images/man.png" alt="HR" />
+					</div>
+					<div id="showThree" class="myDiv">
+						<img src="./images/speaker.png" alt="Developer" />
+					</div> -->
+					<div class="vloger-head">
+
+						<span>I am a</span>
+						<!-- <button>vlogger</button> -->
+						<div class="selectParent">
+							  <select id="myselection">
+								<option>Select Option</option>
+
+								<option value="One">Vlogger</option>
+								<option value="Two">HR</option>
+								<option value="Three">Developer</option>
+							</select>
+						</div>
+						
+					</div>
+					<p>
+						Then you have an endless range of choices for a micro-landing
+						page.
+					</p>
 					<div class="land-lin">
 						<span>Profile Links</span>
 						<p>
@@ -106,16 +132,7 @@
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
 							cupidatat non proident.
 						</p>
-						
 					</div>
-					<!-- <div class="">
-						<span>Profile Links</span>
-						<p>
-							Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident.
-						</p>
-					</div> -->
 				</div>
 				<div class="land-vloger">
 					<iframe
@@ -127,10 +144,23 @@
 						allowfullscreen="true"
 						webkit-playsinline="true"
 						scrolling="no"
-						frameborder="0"
-					></iframe>
-
-					<div class="test-vloger">
+						frameborder="0"></iframe>
+					<div class="test-vloger myDiv" id="showOne">
+						<img src="./images/test.png" height="696" alt="pickmylink" />
+						<div class="man-pic">
+							<img src="./images/man.png" width="308" alt="pickmylink" />
+						</div>
+						<div class="speaker-pic">
+							<img src="./images/speaker.png" width="124" alt="pickmylink" />
+						</div>
+						<div class="camera-pic">
+							<img src="./images/camera.png" width="299" alt="pickmylink" />
+						</div>
+						<div class="list-pic">
+							<img src="./images/list-influ.png" width="499" alt="pickmylink" />
+						</div>
+					</div>
+					<div class="test-vloger myDiv" id="showTwo">
 						<img src="./images/test.png" height="696" alt="pickmylink" />
 						<div class="man-pic">
 							<img src="./images/man.png" width="308" alt="pickmylink" />
@@ -148,7 +178,211 @@
 				</div>
 			</div>
 		</div>
+		<div class="earn-section">
+			<div class="earn-main">
+				<div class="earn-money-section">
+					<h2>
+						<span class="rupee">₹</span>
+						<div id="value"></div>
+						*
+					</h2>
+					<span class="earn">you could earn <span class="emoji">🤑</span></span>
+					<p>
+						*based on an estimated 1% to 5% of your followers purchasing
+						straight from your store.
+					</p>
+					<a href="https://app.pickmy.link/auth/v3/login"><button class="btn-common
+							create-link earn-btn">
+							Grab your Pickmy.link now
+						</button></a>
+				</div>
+				<div class="earn-rich">
+					<h3>how rich is rich?</h3>
+					<p>
+						let's conduct some fast math based on your following numbers and
+						content sharing!
+					</p>
+					<span>simply pick your number of followers</span>
+					<div class="range-slider">
+						<div class="earn-k">1000</div>
+						<input
+							id="range"
+							type="range"
+							step="1000"
+							value="100000"
+							min="1000"
+							max="1000000"
+							/>
+						<div id="tooltip" style="left: calc(31.25% + 6px)">
+							<span>₹250</span>
+						</div>
+						<div class="earn-k">1M</div>
+					</div>
+					<span class="rangein">choose your monthly posts</span>
+					<div class="range-slider">
+						<div class="earn-k">10</div>
+						<input
+							id="range2"
+							type="range"
+							step="1"
+							value="40"
+							min="10"
+							max="100"
+							/>
+						<div id="tooltip2" style="left: calc(31.25% + 6px)">
+							<span>₹250</span>
+						</div>
+						<div class="earn-k">100</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lan-asked">
+			<div class="pick-askme">
+				<div class="pic-le">
+					<img src="./images/giphy.gif" alt="camera" />
+					<span>We understand that you have some</span>
+					<h4>Frequently Asked Questions.</h4>
+				</div>
+				<div class="pick-re">
+					<div class="accordion-items">
+						<div class="accordion-heading">What is a pickmy.link?</div>
+						<div class="accordion-content" style="display: block">
+							pickmy.link is a single link that you can use to reveal everything
+							you’re sharing, everywhere you’re sharing it – all in one place.
+							You can add this personalised URL to your bio on any social media
+							platform, in your email signatures, on business cards, and
+							anywhere your followers, visitors and customers might discover or
+							interact with you.<br />
 
+							<p>
+								“pickmy.link solves the most obvious problem a majority of
+								creators have had by allowing them to promote ALL of their
+								platforms, products, services, etc in the same link.” –
+								<a href="#">@rileydoingthings</a>
+							</p>
+						</div>
+
+						<div class="accordion-heading">What is pickmy.link used for?</div>
+						<div class="accordion-content">
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</div>
+
+						<div class="accordion-heading">Why do I need a pickmy.link?</div>
+						<div class="accordion-content">
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</div>
+						<div class="accordion-heading">
+							Can you get paid and sell things from a pickmy.link?
+						</div>
+						<div class="accordion-content">
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</div>
+						<div class="accordion-heading">
+							How many links should I have on my pickmy.link?
+						</div>
+						<div class="accordion-content">
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pic-footer">
+				<div class="lan-footer">
+					<div class="footer-by">
+						<img src="images/logo.svg" alt="pickmyad" class="logo-img" />
+						<span>by pickmyad</span>
+					</div>
+
+					<div class="lan-btn">
+						<a href="https://app.pickmy.link/auth/v3/login"><button class="btn-common
+								login">Login</button></a>
+						<a href="https://app.pickmy.link/auth/v3/login"><button class="btn-common
+								create-link">
+								Create you free link 🎉
+							</button></a>
+					</div>
+				</div>
+				<div class="footer-social">
+					<img src="./images/facebook.webp" alt="facebook" />
+					<img src="./images/Instagram.svg" alt="Instagram" />
+					<img src="./images/twitter.svg" alt="twitter" />
+					<div class="footer-policy">
+						<a href=""><span>Privacy Policies</span></a>
+						<a href=""><span>Terms and Conditions</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(document).ready(function () {
+				$("#myselection").on("change", function () {
+					var demovalue = $(this).val();
+					$("div.myDiv").hide();
+					$("#show" + demovalue).show();
+				});
+			});
+		</script>
+		<!-- Accordion script -->
+		<script id="rendered-js">
+			$(document).ready(function () {
+				$(".accordion-items").on("click", ".accordion-heading", function () {
+					$(this).toggleClass("active").next().slideToggle();
+
+					$(".accordion-content").not($(this).next()).slideUp(300);
+
+					$(this).siblings().removeClass("active");
+				});
+			});
+		</script>
+		<!-- progress bar animation script -->
+		<script id="rendered-js">
+			const range = document.getElementById("range"),
+				range2 = document.getElementById("range2"),
+				tooltip = document.getElementById("tooltip"),
+				tooltip2 = document.getElementById("tooltip2"),
+				setValue = () => {
+					const newValue = Number(
+							((range.value - range.min) * 100) / (range.max - range.min)
+						),
+						newPosition = 16 - newValue * 0.32;
+					let range1 = "";
+					if (range.value >= 1000000) range1 = range.value / 1000000 + "M";
+					else if (range.value >= 1000) {
+						range1 = range.value / 1000 + "K";
+					} else range1 = range.value + "";
+					tooltip.innerHTML = `<span>${range1}</span>`;
+					tooltip.style.left = `calc(${newValue}% + (${newPosition}px))`;
+					range.style.setProperty(
+						"--range-progress",
+						`calc(${newValue}% + (${newPosition}px))`
+					);
+					console.log(document.documentElement.style);
+				};
+			setValue2 = () => {
+				const newValue = Number(
+						((range2.value - range2.min) * 100) / (range2.max - range2.min)
+					),
+					newPosition = 16 - newValue * 0.32;
+				tooltip2.innerHTML = `<span>${range2.value}</span>`;
+				tooltip2.style.left = `calc(${newValue}% + (${newPosition}px))`;
+				range2.style.setProperty(
+					"--range-progress",
+					`calc(${newValue}% + (${newPosition}px))`
+				);
+			};
+			document.addEventListener("DOMContentLoaded", setValue);
+			range.addEventListener("input", setValue);
+			document.addEventListener("DOMContentLoaded", setValue2);
+			range2.addEventListener("input", setValue2);
+			//# sourceURL=pen.js
+		</script>
+		<!-- scroll animation second section -->
 		<script id="rendered-js">
 			"use strict";
 
@@ -207,6 +441,27 @@
 				card.addEventListener("mousemove", handleHover);
 				card.addEventListener("mouseleave", resetStyles);
 			}
+		</script>
+		<!-- number count progress script -->
+		<script>
+			function animateValue(obj, start, end, duration) {
+				let startTimestamp = null;
+				const step = (timestamp) => {
+					if (!startTimestamp) startTimestamp = timestamp;
+					const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+					const value = Math.floor(progress * (end - start) + start);
+					if (value > 100000) obj.innerHTML = Math.round(value / 100000) + " L";
+					else if (value > 1000) obj.innerHTML = Math.round(value / 1000) + "K";
+					else obj.innerHTML = Math.round(value) + "";
+					if (progress < 1) {
+						window.requestAnimationFrame(step);
+					}
+				};
+				window.requestAnimationFrame(step);
+			}
+
+			const obj = document.getElementById("value");
+			animateValue(obj, 5000, 3000000, 15000);
 		</script>
 	</body>
 </html>
