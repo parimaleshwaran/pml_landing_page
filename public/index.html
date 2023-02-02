@@ -59,6 +59,7 @@
 					</div>
 				</div>
 				<div class="land-claim">
+					<div class="bg"></div>
 					<a href="https://app.pickmy.link/auth/v3/signup">
 						<button id="myLink">Grab your Pickmylink</button>
 					</a>
@@ -165,11 +166,17 @@
 		<div class="earn-section">
 			<div class="earn-main">
 				<div class="earn-money-section">
-					<h2>
+					<h2 id="total-value1">
 						<span class="rupee">₹</span>
-						<div id="value"></div>
+						<div id="tooltip3">30L</div>
 						*
 					</h2>
+					<!-- <h2 id="total-value2" style="display: none;">
+						<span class="rupee">₹</span>
+						<div id="tooltip4">30L</div>
+						*
+					</h2> -->
+					<!-- id="value" animation script number -->
 					<span class="earn">you could earn <span class="emoji">🤑</span></span>
 					<p>
 						*based on an estimated 1% to 5% of your followers purchasing
@@ -187,23 +194,7 @@
 						let's conduct some fast math based on your following numbers and
 						content sharing!
 					</p>
-					<span>simply pick your number of followers</span>
-					<div class="range-slider">
-						<div class="earn-k">1000</div>
-						<input
-							id="range"
-							type="range"
-							step="1000"
-							value="100000"
-							min="1000"
-							max="1000000"
-						/>
-						<div id="tooltip" style="left: calc(31.25% + 6px)">
-							<span>₹250</span>
-						</div>
-						<div class="earn-k earn-m">1M</div>
-					</div>
-					<span class="rangein">choose your monthly posts</span>
+					<span >choose your monthly posts</span>
 					<div class="range-slider">
 						<div class="earn-k">10</div>
 						<input
@@ -219,6 +210,23 @@
 						</div>
 						<div class="earn-k earn-m">100</div>
 					</div>
+					<span class="rangein">simply pick your number of followers</span>
+					<div class="range-slider">
+						<div class="earn-k">1000</div>
+						<input
+							id="range"
+							type="range"
+							step="1000"
+							value="100000"
+							min="1000"
+							max="1000000"
+						/>
+						<div id="tooltip" style="left: calc(31.25% + 6px)">
+							<span>₹250</span>
+						</div>
+						<div class="earn-k earn-m">1M</div>
+					</div>
+				
 				</div>
 			</div>
 		</div>
@@ -908,6 +916,9 @@
 				range2 = document.getElementById("range2"),
 				tooltip = document.getElementById("tooltip"),
 				tooltip2 = document.getElementById("tooltip2"),
+				tooltip3 = document.getElementById("tooltip3"),
+				// tooltip4 = document.getElementById("tooltip4"),
+			
 				setValue = () => {
 					const newValue = Number(
 							((range.value - range.min) * 100) / (range.max - range.min)
@@ -918,31 +929,41 @@
 					else if (range.value >= 1000) {
 						range1 = range.value / 1000 + "K";
 					} else range1 = range.value + "";
+					// document.getElementById('total-value1').style.display = 'flex'
+					// document.getElementById('total-value2').style.display = 'none'
 					tooltip.innerHTML = `<span>${range1}</span>`;
+					tooltip3.innerHTML = `<span>${range1}</span>`;
 					tooltip.style.left = `calc(${newValue}% + (${newPosition}px))`;
+					
 					range.style.setProperty(
 						"--range-progress",
 						`calc(${newValue}% + (${newPosition}px))`
 					);
 				};
-			setValue2 = () => {
+
+				setValue2 = () => {
 				const newValue = Number(
 						((range2.value - range2.min) * 100) / (range2.max - range2.min)
 					),
 					newPosition = 16 - newValue * 0.32;
+			    // document.getElementById('total-value1').style.display = 'none'
+			    // document.getElementById('total-value2').style.display = 'flex'
 				tooltip2.innerHTML = `<span>${range2.value}</span>`;
+				tooltip3.innerHTML = `<span>${range2.value}</span>`;
 				tooltip2.style.left = `calc(${newValue}% + (${newPosition}px))`;
 				range2.style.setProperty(
 					"--range-progress",
 					`calc(${newValue}% + (${newPosition}px))`
 				);
 			};
+			
 			document.addEventListener("DOMContentLoaded", setValue);
 			range.addEventListener("input", setValue);
 			document.addEventListener("DOMContentLoaded", setValue2);
 			range2.addEventListener("input", setValue2);
 			//# sourceURL=pen.js
 		</script>
+		
 		<!-- scroll animation second section -->
 		<script id="rendered-js">
 			"use strict";

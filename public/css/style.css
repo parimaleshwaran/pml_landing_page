@@ -62,6 +62,22 @@ select {
 .land-claim button {
 	@apply bg-[#ffed5d] rounded-full px-6 py-[21px] text-[#0f0f0f] text-base font-bold leading-[22px];
 }
+.bg {
+	animation: pulse 1.2s ease infinite;
+	background: #ffed5d;
+}
+@keyframes pulse {
+	0% {
+		transform: scale(1, 1);
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
 ::placeholder {
 	color: rgba(255, 255, 255, 0.5);
 }
