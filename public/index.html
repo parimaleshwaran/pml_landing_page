@@ -46,13 +46,17 @@
 			</div>
 			<div class="profile-cre">
 				<div class="profile-input">
-					<span>pickmy.link/ </span>
-					<input
-						type="text"
-						autocomplete="off"
-						id="myClaim"
-						placeholder="yourname"
-					/>
+					<div class="int-focu" id="profile-outline">
+						<span>pickmy.link/ </span>
+						<input
+							type="text"
+							autocomplete="off"
+							id="myClaim"
+							placeholder="yourname"
+							onclick="inputFocus(event)"
+							onblur="hideBorder()"
+						/>
+					</div>
 				</div>
 				<div class="land-claim">
 					<a href="https://app.pickmy.link/auth/v3/signup">
@@ -94,22 +98,21 @@
 		<!-- Dropdown image section -->
 		<div class="land-influ">
 			<div class="land-vlog">
-				<div class="land-a">
-					<div class="vloger-head">
+				<div class="land-a" id="scrol-app">
+					<div class="vloger-head" id="stickey-head">
 						<span>I am a</span>
 						<!-- <button>vlogger</button> -->
 						<div class="influ-dropsec">
-							<div id="mainDiv" class="influ-vlog">DIV </div>
-							<img src="./images/arrow_drop.svg" id="drop-down-arrow" >
+							<div id="mainDiv" class="influ-vlog">DIV</div>
+							<img src="./images/arrow_drop.svg" id="drop-down-arrow" />
 						</div>
-						
+						<div id="child" class="infludrop-btn"></div>
 					</div>
-					<div id="child" class="infludrop-btn"></div>
 
 					<p>
 						Then you have an endless range of choices for a micro-landing page.
 					</p>
-					<div class="land-lin">
+					<div class="land-lin" id="profile-link">
 						<span>Profile Links</span>
 						<p>
 							Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -117,8 +120,16 @@
 							cupidatat non proident.
 						</p>
 					</div>
+					<div class="land-lin" id="brand-collab">
+						<span>Brand Collaboration</span>
+						<p>
+							Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident.
+						</p>
+					</div>
 				</div>
-				<div class="land-vloger">
+				<div class="land-vloger" id="land-change">
 					<iframe
 						class="code"
 						src="./canvas.html"
@@ -146,21 +157,6 @@
 							<img src="./images/list-influ.png" width="499" alt="pickmylink" />
 						</div> -->
 					</div>
-					<!-- <div class="test-vloger myDiv" >
-						<img src="./images/test.png" height="696" alt="pickmylink" />
-						<div class="man-pic">
-							<img src="./images/man.png" width="308" alt="pickmylink" />
-						</div>
-						<div class="speaker-pic">
-							<img src="./images/speaker.png" width="124" alt="pickmylink" />
-						</div>
-						<div class="camera-pic">
-							<img src="./images/camera.png" width="299" alt="pickmylink" />
-						</div>
-						<div class="list-pic">
-							<img src="./images/list-influ.png" width="499" alt="pickmylink" />
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -205,7 +201,7 @@
 						<div id="tooltip" style="left: calc(31.25% + 6px)">
 							<span>₹250</span>
 						</div>
-						<div class="earn-k">1M</div>
+						<div class="earn-k earn-m">1M</div>
 					</div>
 					<span class="rangein">choose your monthly posts</span>
 					<div class="range-slider">
@@ -221,7 +217,7 @@
 						<div id="tooltip2" style="left: calc(31.25% + 6px)">
 							<span>₹250</span>
 						</div>
-						<div class="earn-k">100</div>
+						<div class="earn-k earn-m">100</div>
 					</div>
 				</div>
 			</div>
@@ -831,47 +827,43 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="influ-dropsec">
-			<div id="mainDiv" class="influ-vlog">DIV </div>
-		    <img src="./images/arrow_drop.svg" id="drop-down-arrow" >
-		</div>
-		
-		<div id="child" class="infludrop-btn"></div> -->
-		<!-- <img id="image" alt="image" /> -->
+
+		<!-- Dropdown image changes script -->
 		<script>
 			const val = [
-				{slug: "vlogger", name: 'Vlogger', imgUrl: ''}, 
-				{slug: "entrepreneur", name: 'Entrepreneur', imgUrl: ''}, 
-				{ slug: "fitness-trainer",name: 'Fitness trainer', imgUrl: ''},
-				 { slug: "teacher",name: 'Teacher', imgUrl: '' }];
+				{ slug: "vlogger", name: "Vlogger", imgUrl: "" },
+				{ slug: "entrepreneur", name: "Entrepreneur", imgUrl: "" },
+				{ slug: "fitness-trainer", name: "Fitness trainer", imgUrl: "" },
+				{ slug: "teacher", name: "Teacher", imgUrl: "" },
+			];
 			for (i = 0; i < val.length; i++) {
 				const child = document.getElementById("child");
 				const childDiv = document.createElement("div");
 				childDiv.innerHTML = val[i].name;
 				childDiv.id = `select${i}`;
 				const img = document.createElement("img");
-				img.src = val[i].imgUrl
-				child.appendChild(img)
+				img.src = val[i].imgUrl;
+				child.appendChild(img);
 				child.appendChild(childDiv);
 				listen(i, val[i]);
 			}
 			$("#child").hide();
 
 			$("#mainDiv").click(function () {
-				event.stopPropagation()
+				event.stopPropagation();
 				$("#child").toggle();
 			});
-            
-			$(window).click(function(e) {
-               $("#child").hide()
-            });
+
+			$(window).click(function (e) {
+				$("#child").hide();
+			});
 
 			$("#drop-down-arrow").click(function () {
-				event.stopPropagation()
-				$("#child").toggle()
-			})
+				event.stopPropagation();
+				$("#child").toggle();
+			});
 
-			document.getElementById("image").src = "./images/camera.png";
+			document.getElementById("image").src = "./images/vloger.png";
 
 			function listen(index, value) {
 				document
@@ -881,13 +873,15 @@
 						document.getElementById("mainDiv").innerHTML = value.name;
 						$("#child").hide();
 						if (value.slug == "vlogger") {
-							document.getElementById("image").src = "./images/camera.png";
+							document.getElementById("image").src =
+								"./images/brand-collab.webp";
 						}
 						if (value.slug == "entrepreneur") {
-							document.getElementById("image").src = "./images/man.png";
+							document.getElementById("image").src = "./images/vloger.png";
 						}
 						if (value.slug == "fitness-trainer") {
-							document.getElementById("image").src = "./images/speaker.png";
+							document.getElementById("image").src =
+								"./images/brand-collab.webp";
 						}
 						if (value.slug == "teacher") {
 							document.getElementById("image").src = "./images/test.png";
@@ -896,72 +890,6 @@
 			}
 			document.getElementById("mainDiv").innerHTML = val[0].name;
 		</script>
-		<!-- <span class="dropdown-el">
-			<input type="radio" name="sortType" value="Relevance" checked="checked"
-				id="sort-relevance"><label for="sort-relevance">Relevance</label>
-			<input type="radio" name="sortType" value="Popularity" id="sort-best"><label
-				for="sort-best">Product Popularity</label>
-			<input type="radio" name="sortType" value="PriceIncreasing" id="sort-low"><label
-				for="sort-low">Price Low to High</label>
-			<input type="radio" name="sortType" value="PriceDecreasing" id="sort-high"><label
-				for="sort-high">Price High to Low</label>
-			<input type="radio" name="sortType" value="ProductBrand" id="sort-brand"><label
-				for="sort-brand">Product Brand</label>
-			<input type="radio" name="sortType" value="ProductName" id="sort-name"><label
-				for="sort-name">Product Name</label>
-		</span> -->
-		<!-- <select id="myselection">
-			<option>Select Option</option>
-			<option value="One">Vlogger</option>
-			<option value="Two">HR</option>
-			<option value="Three">Developer</option>
-		</select> -->
-		<!-- <div id="showOne" class="myDiv">
-			<img src="./images/camera.png" alt="Manager" />
-		</div>
-		<div id="showTwo" class="myDiv">
-			<img src="./images/man.png" alt="HR" />
-		</div>
-		<div id="showThree" class="myDiv">
-			<img src="./images/speaker.png" alt="Developer" />
-		</div> -->
-
-		<!-- <script>
-			function checkButton() {   
-            var getSelectedValue = document.querySelector('input[name="JTP"]:checked');   
-            console.log(getSelectedValue.value)
-        }
-		</script> -->
-		<!-- <script>
-			$('.dropdown-el').click(function(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  $(this).toggleClass('expanded');
-  $('#'+$(e.target).attr('for')).prop('checked',true);
-});
-$(document).click(function() {
-  $('.dropdown-el').removeClass('expanded');
-});
-		</script>
-		<script>
-			$(document).ready(function () {
-				console.log($("#selection1").prop("checked"));
-				$("#myselection").on("change", function () {
-					var demovalue = $(this).val();
-					$("div.myDiv").hide();
-					$("#show" + demovalue).show();
-				});
-
-				$("#radiobox").change(function () {
-					const selectedValue = $("input[name='revelance']:checked").val();
-					if (selectedValue) {
-						console.log("Hello");
-						$("div.myDiv").hide();
-						$("#showOne").show();
-					}
-				});
-			});
-		</script> -->
 		<!-- Accordion script -->
 		<script id="rendered-js">
 			$(document).ready(function () {
@@ -1096,5 +1024,40 @@ $(document).click(function() {
 			const obj = document.getElementById("value");
 			animateValue(obj, 5000, 3000000, 15000);
 		</script>
+
+		<!-- Scroll Apps design -->
+		<script>
+			document.getElementById("scrol-app").onscroll = function () {
+				if (document.getElementById("scrol-app").scrollTop > 200) {
+					document.getElementById("profile-link").style.visibility = "hidden";
+					document.getElementById("land-change").style.backgroundColor =
+						"#290038";
+					document.getElementById("image").src = "./images/test.png";
+					
+					document.getElementById("brand-collab").style.marginTop = '170px'
+				}
+				if (document.getElementById("scrol-app").scrollTop < 80) {
+					document.getElementById("land-change").style.backgroundColor =
+						"#ffa42b";
+					document.getElementById("brand-collab").style.marginTop = '278px'
+					document.getElementById("profile-link").style.visibility = "visible";
+					document.getElementById("image").src = "./images/brand-collab.webp";
+				}
+			};
+		</script>
+		<!--  -->
+
+		<!-- Input Focus -->
+		<script>
+			function inputFocus(event) {
+				document.getElementById("profile-outline").style.border =
+					"2px solid white";
+			}
+			function hideBorder() {
+				document.getElementById("profile-outline").style.border =
+					"2px solid #0f0f0f";
+			}
+		</script>
+		<!--  -->
 	</body>
 </html>
