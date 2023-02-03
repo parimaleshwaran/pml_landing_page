@@ -17,7 +17,7 @@ select {
 
 /* header section */
 .lan-body {
-	@apply bg-[#0f0f0f] px-20 pt-5 rounded-bl-[40px] rounded-br-[40px];
+	@apply bg-[#0f0f0f] px-20 pt-5 rounded-bl-[40px] rounded-br-[40px] overflow-hidden;
 }
 .lan-head {
 	@apply bg-[#222] px-5 py-4 flex rounded-xl;
@@ -62,20 +62,30 @@ select {
 .land-claim button {
 	@apply bg-[#ffed5d] rounded-full px-6 py-[21px] text-[#0f0f0f] text-base font-bold leading-[22px];
 }
-.bg {
-	animation: pulse 1.2s ease infinite;
-	background: #ffed5d;
+.pulse {
+	display: block;
+	border-radius: 50px;
+	background: #cca92c;
+	cursor: pointer;
+	box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+	animation: pulse 2s infinite;
 }
+.pulse:hover {
+	animation: none;
+}
+
 @keyframes pulse {
 	0% {
-		transform: scale(1, 1);
+		-moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+		box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
 	}
-	50% {
-		opacity: 0.3;
+	70% {
+		-moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+		box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
 	}
 	100% {
-		transform: scale(1.5);
-		opacity: 0;
+		-moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+		box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
 	}
 }
 ::placeholder {
@@ -667,7 +677,10 @@ iframe.code {
 .test-vloger {
 	cursor: url(https://pickmyad.com/images/logo.svg), auto;
 }
-
+.land-influ {
+	cursor: url(https://app.pickmy.link/auth/assets/images/influencer/settings/pickmylink.svg),
+		auto;
+}
 /* vloger scroll overwrite */
 .land-a::-webkit-scrollbar {
 	width: 0px;
@@ -681,4 +694,34 @@ iframe.code {
 
 .land-a::-webkit-scrollbar-thumb:hover {
 	background: #555;
+}
+/* Smooth scroll  */
+.section span {
+	color: #f5507d;
+	font-size: 120px;
+	text-align: center;
+	font-weight: 700;
+	line-height: 132px;
+}
+.section h2 {
+	color: white;
+	font-size: 120px;
+	text-align: center;
+	font-weight: 700;
+	line-height: 132px;
+}
+.section p {
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	font-weight: 600;
+	line-height: 32px;
+	padding-top: 16px;
+}
+.section--large {
+	width: 100vw;
+	color: white;
+}
+section {
+	transition: color 0.3s;
 }
