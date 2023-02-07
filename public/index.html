@@ -1,1205 +1,925 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="icon" type="image/x-icon" href="favicon.ico" />
-		<link rel="stylesheet" href="./css/tailwind.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&display=swap"
-			rel="stylesheet"
-			/>
-		<script src="./scroll-smooth.js"></script>
-		<script src="./scroll.smooth2.js"></script>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
-			/>
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./scroll-smooth.js"></script>
+    <script src="./scroll.smooth2.js"></script>
 
-	<body>
-		<!-- Pickmylink new design -->
-		<div class="lan-body">
-			<div class="lan-head">
-				<img src="images/logo.svg" alt="pickmyad" class="logo-img" />
-				<img src="images/mobile-logo.svg" alt="pickmyad" class="logo-res" />
-				<div class="lan-btn">
-					<a href="https://app.pickmy.link/auth/v3/login"><button class="btn-common
-							login">Login</button></a>
-					<a href="https://app.pickmy.link/auth/v3/login"><button class="btn-common
-							create-link">
-							Create you free link 🎉
-						</button></a>
-				</div>
-			</div>
-			<div class="land-head zoo-in">
-				<h1>
-					one <span>link.</span><br />
-					endless possibilities
-				</h1>
-				<p class="zoo-in-i">
-					Share the online content you create, curate, and sell with over 30
-					million others. each from a different bio link.
-				</p>
-			</div>
-			<div class="profile-cre">
-				<div class="profile-input">
-					<div class="int-focu" id="profile-outline">
-						<span>pickmy.link/ </span>
-						<input
-							type="text"
-							autocomplete="off"
-							id="myClaim"
-							placeholder="yourname"
-							onclick="inputFocus(event)"
-							onblur="hideBorder()"
-							/>
-					</div>
-				</div>
-				<div class="land-claim">
-					<div>
-						<a href="https://app.pickmy.link/auth/v3/signup" class="pulse">
-							<button id="myLink">Grab your Pickmylink</button>
-						</a>
-					</div>
-				</div>
-			</div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
 
-			<!-- Scroll move to section -->
-			<!--Mobile view scroll   -->
-			<div class="mobile-scroll">
-				<div>
-					<h2>millions of<br>
-						<span>dollars earned</span></h2>
-						<p>by creators selling on pickmy.link</p>
-				</div>
-				<div>
-					<h2>millions of<br>
-						<span>dollars earned</span></h2>
-						<p>by creators selling on pickmy.link</p>
-				</div>
-				<div>
-					<h2>millions of<br>
-						<span>dollars earned</span></h2>
-						<p>by creators selling on pickmy.link</p>
-				</div>
-			</div>
-			<!--  -->
-			<div class="pin-spacer ">
-				<div class="wrapper d-flex">
-					<section
-						class="section section--large vw-100 vh-100 d-flex justify-content-center
-						align-items-center active">
-						<h2>
-							millions of<br />
-							<span> dollars earned</span>
-						</h2>
-						<p>by creators selling on pickmy.link</p>
+  <body onscroll="mobileViewScroll()">
+    <!-- Pickmylink new design -->
+    <div class="lan-body">
+      <div class="lan-head">
+        <img src="images/logo.svg" alt="pickmyad" class="logo-img" />
+        <img src="images/mobile-logo.svg" alt="pickmyad" class="logo-res" />
+        <div class="lan-btn">
+          <a href="https://app.pickmy.link/auth/v3/login"
+            ><button class="btn-common login">Login</button></a
+          >
+          <a href="https://app.pickmy.link/auth/v3/login"
+            ><button class="btn-common create-link">
+              Create you free link 🎉
+            </button></a
+          >
+        </div>
+      </div>
+      <div class="land-head zoo-in">
+        <h1>
+          one <span>link.</span><br />
+          endless possibilities
+        </h1>
+        <p class="zoo-in-i">
+          Share the online content you create, curate, and sell with over 30
+          million others. each from a different bio link.
+        </p>
+      </div>
+      <div class="profile-cre">
+        <div class="profile-input">
+          <div class="int-focu" id="profile-outline">
+            <span>pickmy.link/ </span>
+            <input
+              type="text"
+              autocomplete="off"
+              id="myClaim"
+              placeholder="yourname"
+              onclick="inputFocus(event)"
+              onblur="hideBorder()"
+            />
+          </div>
+        </div>
+        <div class="land-claim">
+          <div>
+            <a href="https://app.pickmy.link/auth/v3/signup" class="pulse">
+              <button id="myLink">Grab your Pickmylink</button>
+            </a>
+          </div>
+        </div>
+      </div>
 
-					</section>
-					<section
-						class="section section--large flex-col flex-shrink-0 vw-100 vh-100 d-flex
-						justify-content-center align-items-center active">
-						<h2>
-							millions of<br />
-							<span> dollars earned</span>
-						</h2>
-						<p>by creators selling on pickmy.link</p>
-					</section>
-					<section
-						class="section section--large flex-col flex-shrink-0 vw-100 vh-100 d-flex
-						justify-content-center align-items-center active">
-						<h2>
-							millions of<br />
-							<span> dollars earned</span>
-						</h2>
-						<p>by creators selling on pickmy.link</p>
+      <!-- Scroll move to section -->
+      <!--Mobile view scroll   -->
+      <div class="mobile-scroll" id="mobile-scroll">
+        <div id="text-section-1">
+          <h2 id="text-1">
+            millions of<br />
+            <span>dollars earned</span>
+          </h2>
+          <p>by creators selling on pickmy.link</p>
+        </div>
+        <div id="text-section-2">
+          <h2 id="text-2">
+            millions of<br />
+            <span>dollars earned</span>
+          </h2>
+          <p>by creators selling on pickmy.link</p>
+        </div>
+        <div id="text-section-3">
+          <h2 id="text-3">
+            millions of<br />
+            <span>dollars earned</span>
+          </h2>
+          <p>by creators selling on pickmy.link</p>
+        </div>
+      </div>
+      <!--  -->
+      <div class="pin-spacer" id="text-view">
+        <div class="wrapper d-flex">
+          <section
+            class="section section--large vw-100 vh-100 d-flex justify-content-center align-items-center active"
+          >
+            <h2>
+              millions of<br />
+              <span> dollars earned</span>
+            </h2>
+            <p>by creators selling on pickmy.link</p>
+          </section>
+          <section
+            class="section section--large flex-col flex-shrink-0 vw-100 vh-100 d-flex justify-content-center align-items-center active"
+          >
+            <h2>
+              millions of<br />
+              <span> dollars earned</span>
+            </h2>
+            <p>by creators selling on pickmy.link</p>
+          </section>
+          <section
+            class="section section--large flex-col flex-shrink-0 vw-100 vh-100 d-flex justify-content-center align-items-center active"
+          >
+            <h2>
+              millions of<br />
+              <span> dollars earned</span>
+            </h2>
+            <p>by creators selling on pickmy.link</p>
+          </section>
+        </div>
+      </div>
+    </div>
 
-					</section>
-				</div>
-			</div>
-			<!-- <div class="sticky-parent">
-				<div class="stickyin">
-					<div class="horizontal">
-						<div class="dim">
-							<h2>
-								millions of<br />
-								<span>dollars earned</span>
-								<p>by creators selling on pickmy.link</p>
-							</h2>
-						</div>
-						<div class="dim">
-							<h2>
-								millions of<br />
-								<span>dollars earned</span>
-								<p>by creators selling on pickmy.link</p>
-							</h2>
-						</div>
-						<div class="dim">
-							<h2>
-								millions of<br />
-								<span>dollars earned</span>
-								<p>by creators selling on pickmy.link</p>
-							</h2>
-						</div>
-					</div>
-				</div>
-			</div> -->
-		</div>
+    <!-- Dropdown image section -->
+    <div class="land-influ">
+      <div class="land-vlog">
+        <div class="land-a">
+          <div class="row1">
+            <div class="row2" id="scroll-app">
+              <div class="vloger-head" id="stickey-head">
+                <span>I am a</span>
+                <!-- <button>vlogger</button> -->
+                <div class="influ-dropsec">
+                  <div id="mainDiv" class="influ-vlog">DIV</div>
+                  <img src="./images/arrow_drop.svg" id="drop-down-arrow" />
+                </div>
+                <div id="child" class="infludrop-btn"></div>
+              </div>
 
-		<!-- Dropdown image section -->
-		<div class="land-influ">
-			<div class="land-vlog">
-				<div class="land-a">
-					<div class="row1">
-						<div class="row2" id="scrol-app">
-							<div class="vloger-head" id="stickey-head">
-								<span>I am a</span>
-								<!-- <button>vlogger</button> -->
-								<div class="influ-dropsec">
-									<div id="mainDiv" class="influ-vlog">DIV</div>
-									<img src="./images/arrow_drop.svg" id="drop-down-arrow" />
-								</div>
-								<div id="child" class="infludrop-btn"></div>
-							</div>
+              <p>
+                Then you have an endless range of choices for a micro-landing
+                page.
+              </p>
 
-							<p>
-								Then you have an endless range of choices for a micro-landing page.
-							</p>
+              <div class="land-lin" id="profile-link">
+                <span>Profile Links</span>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident.
+                </p>
+              </div>
+              <div class="land-lin mobile2" id="brand-collaboration">
+                <span>Brand Collaboration</span>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident.
+                </p>
+              </div>
+            </div>
 
+            <!--  -->
+            <div class="land-vloger mobile-off" id="land-change">
+              <iframe
+                class="code"
+                src="./canvas.html"
+                allow="fullscreen"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                allowfullscreen="true"
+                webkit-playsinline="true"
+                scrolling="no"
+                frameborder="0"
+              ></iframe>
+              <div class="test-vloger">
+                <img id="image" alt="image" />
+              </div>
+            </div>
+          </div>
+          <div class="land-lin mobile" id="brand-collaboration">
+            <span>Brand Collaboration</span>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident.
+            </p>
+          </div>
+        </div>
 
-							<div class="land-lin" id="profile-link">
-								<span>Profile Links</span>
-								<p>
-									Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-									cupidatat non proident.
-								</p>
-							</div>
-							<div class="land-lin mobile2" id="brand-collab">
-								<span>Brand Collaboration</span>
-								<p>
-									Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-									cupidatat non proident.
-								</p>
-							</div>
+        <!--  -->
+        <div class="land-vloger mobile-vloger">
+          <iframe
+            class="code"
+            src="./canvas2.html"
+            allow="fullscreen"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            allowfullscreen="true"
+            webkit-playsinline="true"
+            scrolling="no"
+            frameborder="0"
+          ></iframe>
+          <div class="test-vloger">
+            <img id="mv-image" alt="image" />
+          </div>
+        </div>
+      </div>
+    </div>
 
-						</div>
-
-						<!--  -->
-						<div class="land-vloger mobile-off" id="land-change">
-							<iframe
-								class="code"
-								src="./canvas.html"
-								allow="fullscreen"
-								webkitallowfullscreen="true"
-								mozallowfullscreen="true"
-								allowfullscreen="true"
-								webkit-playsinline="true"
-								scrolling="no"
-								frameborder="0"></iframe>
-							<div class="test-vloger">
-								<img id="image" alt="image" />
-							</div>
-						</div>
-
-					</div>
-					<div class="land-lin mobile" id="brand-collab">
-						<span>Brand Collaboration</span>
-						<p>
-							Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident.
-						</p>
-					</div>
-				</div>
-
-				<!--  -->
-				<div class="land-vloger mobile-vloger">
-					<iframe
-						class="code"
-						src="./canvas2.html"
-						allow="fullscreen"
-						webkitallowfullscreen="true"
-						mozallowfullscreen="true"
-						allowfullscreen="true"
-						webkit-playsinline="true"
-						scrolling="no"
-						frameborder="0"></iframe>
-					<div class="test-vloger">
-						<img id="mv-image" alt="image" />
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Progress bar section -->
-		<div class="earn-section">
-			<div class="earn-main">
-				<div class="earn-money-section">
-					<h2 id="total-value1">
-						<span class="rupee">₹</span>
-						<div id="tooltip3">30L</div>
-						*
-					</h2>
-					<!-- <h2 id="total-value2" style="display: none;">
+    <!-- Progress bar section -->
+    <div class="earn-section">
+      <div class="earn-main">
+        <div class="earn-money-section">
+          <h2 id="total-value1">
+            <span class="rupee">₹</span>
+            <div id="amount">30L</div>
+            *
+          </h2>
+          <!-- <h2 id="total-value2" style="display: none;">
 						<span class="rupee">₹</span>
 						<div id="tooltip4">30L</div>
 						*
 					</h2> -->
-					<!-- id="value" animation script number -->
-					<span class="earn">you could earn <span class="emoji">🤑</span></span>
-					<p>
-						*based on an estimated 1% to 5% of your followers purchasing
-						straight from your store.
-					</p>
-					<a href="https://app.pickmy.link/auth/v3/login"><button class="btn-common
-							create-link earn-btn">
-							Grab your Pickmy.link now
-						</button></a>
-				</div>
-				<div class="earn-rich">
-					<h3>how rich is rich?</h3>
-					<p>
-						let's conduct some fast math based on your following numbers and
-						content sharing!
-					</p>
-					<span>choose your monthly posts</span>
-					<div class="range-slider">
-						<div class="earn-k">10</div>
-						<input
-							id="range2"
-							type="range"
-							step="1"
-							value="40"
-							min="10"
-							max="100"
-							/>
-						<div id="tooltip2" style="left: calc(31.25% + 6px)">
-							<span>₹250</span>
-						</div>
-						<div class="earn-k earn-m">100</div>
-					</div>
-					<span class="rangein">simply pick your number of followers</span>
-					<div class="range-slider">
-						<div class="earn-k">1000</div>
-						<input
-							id="range"
-							type="range"
-							step="1000"
-							value="100000"
-							min="1000"
-							max="1000000"
-							/>
-						<div id="tooltip" style="left: calc(31.25% + 6px)">
-							<span>₹250</span>
-						</div>
-						<div class="earn-k earn-m">1M</div>
-					</div>
-				</div>
-			</div>
-		</div>
+          <!-- id="value" animation script number -->
+          <span class="earn">you could earn <span class="emoji">🤑</span></span>
+          <p>
+            *based on an estimated 1% to 5% of your followers purchasing
+            straight from your store.
+          </p>
+          <a href="https://app.pickmy.link/auth/v3/login"
+            ><button class="btn-common create-link earn-btn">
+              Grab your Pickmy.link now
+            </button></a
+          >
+        </div>
+        <div class="earn-rich">
+          <h3>how rich is rich?</h3>
+          <p>
+            let's conduct some fast math based on your following numbers and
+            content sharing!
+          </p>
+          <span>choose your monthly posts</span>
+          <div class="range-slider">
+            <div class="earn-k">10</div>
+            <input
+              id="monthly-post-range"
+              type="range"
+              step="1"
+              value="40"
+              min="10"
+              max="100"
+            />
+            <div id="followers" style="left: calc(31.25% + 6px)">
+              <span>₹250</span>
+            </div>
+            <div class="earn-k earn-m">100</div>
+          </div>
+          <span class="rangein">simply pick your number of followers</span>
+          <div class="range-slider">
+            <div class="earn-k">1000</div>
+            <input
+              id="followers-range"
+              type="range"
+              step="1000"
+              value="100000"
+              min="1000"
+              max="1000000"
+            />
+            <div id="monthly-post" style="left: calc(31.25% + 6px)">
+              <span>₹250</span>
+            </div>
+            <div class="earn-k earn-m">1M</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- Carousel section -->
-		<div class="pick-carousel-sec">
-			<div class="pick-caro">
-				<div class="pick-influ">
-					<h3>Trusted by <span>30M+</span> Influencers</h3>
-					<p>
-						Creators are taking the first steps toward becoming creatorpreneurs.
-						Be a creatorpreneur, not just a creative.
-					</p>
-					<a href="https://app.pickmy.link/auth/v3/login"><button class="btn-common
-							create-link earn-btn">
-							Grab your Pickmy.link now
-						</button></a>
-				</div>
-				<div class="pick-slider">
-					<div class="slider">
-						<div class="slide-track">
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channels_profile7.jpg" alt="Avatar" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels4_profile.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile5.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile4.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels_profile3.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels4_profile.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels4_profile2.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile7.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile6.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile5.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile4.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels_profile3.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels4_profile2.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels4_profile.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="slider slider-second">
-						<div class="slide-track2">
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile6.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile5.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile4.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels_profile3.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels4_profile2.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels4_profile.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channels_profile7.jpg" alt="Avatar" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels4_profile.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile5.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile4.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels_profile3.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels4_profile.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img
-											src="./images/channels4_profile2.jpg"
-											alt="niram-logo"
-											/>
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-							<div class="flip-card">
-								<div class="flip-card-inner">
-									<div class="flip-card-front">
-										<img src="./images/channel_profile7.jpg" alt="niram-logo" />
-									</div>
-									<a
-										class="flip-card-back"
-										href="https://www.youtube.com/@nammaoorucouple"
-										target="_blank">
-										<img src="./images/link_re.svg" />
-										<p>Pickmy.link</p>
-										<h3>Namma Ooru Couple - Kriti & Ifthi</h3>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <!-- Carousel section -->
+    <div class="pick-carousel-sec">
+      <div class="pick-caro">
+        <div class="pick-influ">
+          <h3>Trusted by <span>30M+</span> Influencers</h3>
+          <p>
+            Creators are taking the first steps toward becoming creatorpreneurs.
+            Be a creatorpreneur, not just a creative.
+          </p>
+          <a href="https://app.pickmy.link/auth/v3/login"
+            ><button class="btn-common create-link earn-btn">
+              Grab your Pickmy.link now
+            </button></a
+          >
+        </div>
+        <div class="pick-slider">
+          <div class="slider">
+            <div class="slide-track">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channels_profile7.jpg" alt="Avatar" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels4_profile.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile5.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile4.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels_profile3.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels4_profile.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels4_profile2.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile7.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile6.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile5.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile4.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels_profile3.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels4_profile2.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels4_profile.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider slider-second">
+            <div class="slide-track2">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile6.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile5.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile4.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels_profile3.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels4_profile2.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels4_profile.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channels_profile7.jpg" alt="Avatar" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels4_profile.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile5.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile4.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels_profile3.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels4_profile.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="./images/channels4_profile2.jpg"
+                      alt="niram-logo"
+                    />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/channel_profile7.jpg" alt="niram-logo" />
+                  </div>
+                  <a
+                    class="flip-card-back"
+                    href="https://www.youtube.com/@nammaoorucouple"
+                    target="_blank"
+                  >
+                    <img src="./images/link_re.svg" />
+                    <p>Pickmy.link</p>
+                    <h3>Namma Ooru Couple - Kriti & Ifthi</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- Faq section -->
-		<div class="lan-asked">
-			<div class="pick-askme">
-				<div class="pic-le">
-					<img src="./images/giphy.gif" alt="camera" />
-					<span>We understand that you have some</span>
-					<h4>Frequently Asked Questions.</h4>
-				</div>
-				<div class="pick-re">
-					<div class="accordion-items">
-						<div class="accordion-heading">What is a pickmy.link?</div>
-						<div class="accordion-content" style="display: block">
-							pickmy.link is a single link that you can use to reveal everything
-							you’re sharing, everywhere you’re sharing it – all in one place.
-							You can add this personalised URL to your bio on any social media
-							platform, in your email signatures, on business cards, and
-							anywhere your followers, visitors and customers might discover or
-							interact with you.<br />
+    <!-- Faq section -->
+    <div class="lan-asked">
+      <div class="pick-askme">
+        <div class="pic-le">
+          <img src="./images/giphy.gif" alt="camera" />
+          <span>We understand that you have some</span>
+          <h4>Frequently Asked Questions.</h4>
+        </div>
+        <div class="pick-re">
+          <div class="accordion-items">
+            <div class="accordion-heading">What is a pickmy.link?</div>
+            <div class="accordion-content" style="display: block">
+              pickmy.link is a single link that you can use to reveal everything
+              you’re sharing, everywhere you’re sharing it – all in one place.
+              You can add this personalised URL to your bio on any social media
+              platform, in your email signatures, on business cards, and
+              anywhere your followers, visitors and customers might discover or
+              interact with you.<br />
 
-							<p>
-								“pickmy.link solves the most obvious problem a majority of
-								creators have had by allowing them to promote ALL of their
-								platforms, products, services, etc in the same link.” –
-								<a href="#">@rileydoingthings</a>
-							</p>
-						</div>
+              <p>
+                “pickmy.link solves the most obvious problem a majority of
+                creators have had by allowing them to promote ALL of their
+                platforms, products, services, etc in the same link.” –
+                <a href="#">@rileydoingthings</a>
+              </p>
+            </div>
 
-						<div class="accordion-heading">What is pickmy.link used for?</div>
-						<div class="accordion-content">
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</div>
+            <div class="accordion-heading">What is pickmy.link used for?</div>
+            <div class="accordion-content">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
 
-						<div class="accordion-heading">Why do I need a pickmy.link?</div>
-						<div class="accordion-content">
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</div>
-						<div class="accordion-heading">
-							Can you get paid and sell things from a pickmy.link?
-						</div>
-						<div class="accordion-content">
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</div>
-						<div class="accordion-heading">
-							How many links should I have on my pickmy.link?
-						</div>
-						<div class="accordion-content">
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</div>
-					</div>
-				</div>
-			</div>
+            <div class="accordion-heading">Why do I need a pickmy.link?</div>
+            <div class="accordion-content">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <div class="accordion-heading">
+              Can you get paid and sell things from a pickmy.link?
+            </div>
+            <div class="accordion-content">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <div class="accordion-heading">
+              How many links should I have on my pickmy.link?
+            </div>
+            <div class="accordion-content">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<!-- Footer section -->
-			<div class="pic-footer">
-				<div class="lan-footer">
-					<div class="footer-by">
-						<img src="images/logo.svg" alt="pickmyad" />
-						<span>by pickmyad</span>
-					</div>
+      <!-- Footer section -->
+      <div class="pic-footer">
+        <div class="lan-footer">
+          <div class="footer-by">
+            <img src="images/logo.svg" alt="pickmyad" />
+            <span>by pickmyad</span>
+          </div>
 
-					<div class=" lan-allow">
-						<a href="https://app.pickmy.link/auth/v3/login"><button class="btn-common
-								login">Login</button></a>
-						<a href="https://app.pickmy.link/auth/v3/login"><button class="btn-common
-								create-link">
-								Create you free link 🎉
-							</button></a>
-					</div>
-				</div>
-				<div class="footer-social">
-					<div class="footer-icon"><img src="./images/facebook.webp" alt="facebook"
-							/>
-						<img src="./images/Instagram.svg" alt="Instagram" />
-						<img src="./images/twitter.svg" alt="twitter" /></div>
+          <div class="lan-allow">
+            <a href="https://app.pickmy.link/auth/v3/login"
+              ><button class="btn-common login">Login</button></a
+            >
+            <a href="https://app.pickmy.link/auth/v3/login"
+              ><button class="btn-common create-link">
+                Create you free link 🎉
+              </button></a
+            >
+          </div>
+        </div>
+        <div class="footer-social">
+          <div class="footer-icon">
+            <img src="./images/facebook.webp" alt="facebook" />
+            <img src="./images/Instagram.svg" alt="Instagram" />
+            <img src="./images/twitter.svg" alt="twitter" />
+          </div>
 
-					<div class="footer-policy">
-						<a href=""><span>Privacy Policies</span></a>
-						<a href=""><span>Terms and Conditions</span></a>
-					</div>
-				</div>
-			</div>
-		</div>
+          <div class="footer-policy">
+            <a href=""><span>Privacy Policies</span></a>
+            <a href=""><span>Terms and Conditions</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- Dropdown image changes script -->
-		<script>
-			const val = [
-				{ slug: "vlogger", name: "Vlogger", imgUrl: "" },
-				{ slug: "entrepreneur", name: "Entrepreneur", imgUrl: "" },
-				{ slug: "fitness-trainer", name: "Fitness trainer", imgUrl: "" },
-				{ slug: "teacher", name: "Teacher", imgUrl: "" },
-			];
-			for (i = 0; i < val.length; i++) {
-				const child = document.getElementById("child");
-				const childDiv = document.createElement("div");
-				childDiv.innerHTML = val[i].name;
-				childDiv.id = `select${i}`;
-				const img = document.createElement("img");
-				img.src = val[i].imgUrl;
-				child.appendChild(img);
-				child.appendChild(childDiv);
-				listen(i, val[i]);
-			}
-			$("#child").hide();
+    <script>
+      $(document).ready(function () {
+        $("#child").hide();
+        // Accordion script
+        $(".accordion-items").on("click", ".accordion-heading", function () {
+          $(this).toggleClass("active").next().slideToggle();
+          $(".accordion-content").not($(this).next()).slideUp(300);
+          $(this).siblings().removeClass("active");
+        });
+      });
 
-			$("#mainDiv").click(function () {
-				event.stopPropagation();
-				$("#child").toggle();
-			});
+      $("#mainDiv").click(function () {
+        event.stopPropagation();
+        $("#child").toggle();
+      });
 
-			$(window).click(function (e) {
-				$("#child").hide();
-			});
+      $(window).click(function (e) {
+        $("#child").hide();
+      });
 
-			$("#drop-down-arrow").click(function () {
-				event.stopPropagation();
-				$("#child").toggle();
-			});
-
-			document.getElementById("image").src = "./images/camera.png";
-			document.getElementById("mv-image").src = "./images/man.png";
-
-			var renderImage = 'vlogger';
-            
-			function listen(index, value) {
-				document
-					.getElementById(`select${index}`)
-					.addEventListener("click", () => {
-						const val = document.getElementById(`select${index}`).innerHTML;
-						document.getElementById("mainDiv").innerHTML = value.name;
-						renderImage = value.slug;
-						$("#child").hide();
-						if(document.getElementById("scrol-app").scrollTop > 200) {
-							brandCollabRenderImage(value.slug);
-						}
-						if(document.getElementById("scrol-app").scrollTop < 80) {
-                           profileLinkRenderImage(value.slug)
-						}
-					});
-			}
-			      document.getElementById("mainDiv").innerHTML = val[0].name;
-                //  
-
-				document.getElementById("scrol-app").onscroll = function () {
-				if (document.getElementById("scrol-app").scrollTop > 200) {
-					document.getElementById("profile-link").style.visibility = "hidden";
-					document.getElementById("land-change").style.backgroundColor =
-						"#290038";
-					// document.getElementById("image").src = "./images/man.png";
-					brandCollabRenderImage(renderImage);
-					document.getElementById("brand-collab").style.marginTop = "170px";
-				}
-				if (document.getElementById("scrol-app").scrollTop < 80) {
-					document.getElementById("land-change").style.backgroundColor =
-						"#ffa42b";
-					document.getElementById("brand-collab").style.marginTop = "278px";
-					document.getElementById("profile-link").style.visibility = "visible";
-					profileLinkRenderImage(renderImage);
-					// document.getElementById("image").src = "./images/camera.png";
-				}
-			  };
-
-			function profileLinkRenderImage(type) { 
-			   if(type == "vlogger") {
-				document.getElementById("image").src = "./images/camera.png";
-				document.getElementById("mv-image").src = "./images/man.png";
-			   }
-			   if (type == "entrepreneur") {
-				document.getElementById("image").src = "./images/man.png";
-				document.getElementById("mv-image").src = "./images/camera.png";
-			   }
-			   if (type == "fitness-trainer") {
-				document.getElementById("image").src = "./images/camera.png";
-				document.getElementById("mv-image").src = "./images/man.png";
-			   }
-			   if (type == "teacher") {
-				document.getElementById("image").src = "./images/man.png";
-				document.getElementById("mv-image").src = "./images/camera.png";
-			   }
-			}
-
-			function brandCollabRenderImage(type) {
-			   if(type == "vlogger") {
-				document.getElementById("image").src = "./images/man.png"; 
-				document.getElementById("mv-image").src = "./images/camera.png";
-			   }
-			   if (type == "entrepreneur") {
-				document.getElementById("image").src = "./images/camera.png";
-				document.getElementById("mv-image").src = "./images/man.png";
-			   }
-			   if (type == "fitness-trainer") {
-				document.getElementById("image").src = "./images/man.png";
-				document.getElementById("mv-image").src = "./images/camera.png";
-			   }
-			   if (type == "teacher") {
-				document.getElementById("image").src = "./images/camera.png";
-				document.getElementById("mv-image").src = "./images/man.png";
-			   }
-			}
-               // 
-		</script>
-		<!-- Accordion script -->
-		<script id="rendered-js">
-			$(document).ready(function () {
-				$(".accordion-items").on("click", ".accordion-heading", function () {
-					$(this).toggleClass("active").next().slideToggle();
-
-					$(".accordion-content").not($(this).next()).slideUp(300);
-
-					$(this).siblings().removeClass("active");
-				});
-			});
-		</script>
-		<!-- progress bar animation script -->
-		<script id="rendered-js">
-			const range = document.getElementById("range"),
-				range2 = document.getElementById("range2"),
-				tooltip = document.getElementById("tooltip"),
-				tooltip2 = document.getElementById("tooltip2"),
-				tooltip3 = document.getElementById("tooltip3"),
-				// tooltip4 = document.getElementById("tooltip4"),
-
-				setValue = () => {
-					const newValue = Number(
-							((range.value - range.min) * 100) / (range.max - range.min)
-						),
-						newPosition = 16 - newValue * 0.32;
-					let range1 = "";
-					if (range.value >= 1000000) range1 = range.value / 1000000 + "M";
-					else if (range.value >= 1000) {
-						range1 = range.value / 1000 + "K";
-					} else range1 = range.value + "";
-					// document.getElementById('total-value1').style.display = 'flex'
-					// document.getElementById('total-value2').style.display = 'none'
-					tooltip.innerHTML = `<span>${range1}</span>`;
-					tooltip3.innerHTML = `<span>${range1}</span>`;
-					tooltip.style.left = `calc(${newValue}% + (${newPosition}px))`;
-
-					range.style.setProperty(
-						"--range-progress",
-						`calc(${newValue}% + (${newPosition}px))`
-					);
-				};
-
-			setValue2 = () => {
-				const newValue = Number(
-						((range2.value - range2.min) * 100) / (range2.max - range2.min)
-					),
-					newPosition = 16 - newValue * 0.32;
-				// document.getElementById('total-value1').style.display = 'none'
-				// document.getElementById('total-value2').style.display = 'flex'
-				tooltip2.innerHTML = `<span>${range2.value}</span>`;
-				tooltip3.innerHTML = `<span>${range2.value}</span>`;
-				tooltip2.style.left = `calc(${newValue}% + (${newPosition}px))`;
-				range2.style.setProperty(
-					"--range-progress",
-					`calc(${newValue}% + (${newPosition}px))`
-				);
-			};
-
-			document.addEventListener("DOMContentLoaded", setValue);
-			range.addEventListener("input", setValue);
-			document.addEventListener("DOMContentLoaded", setValue2);
-			range2.addEventListener("input", setValue2);
-			//# sourceURL=pen.js
-		</script>
-		<!-- scroll animation second section -->
-		<script id="rendered-js">
-			"use strict";
-
-			document.addEventListener("scroll", horizontalScroll);
-
-			let sticky = document.querySelector(".stickyin");
-			let stickyParent = document.querySelector(".sticky-parent");
-
-			let scrollWidth = sticky.scrollWidth;
-			let verticalScrollHeight =
-				stickyParent.getBoundingClientRect().height -
-				sticky.getBoundingClientRect().height;
-
-			//Scroll function
-			function horizontalScroll() {
-				//Checking whether the sticky element has entered into view or not
-				let stickyPosition = sticky.getBoundingClientRect().top;
-				if (stickyPosition > 1) {
-					return;
-				} else {
-					let scrolled = stickyParent.getBoundingClientRect().top; //how much is scrolled?
-					sticky.scrollLeft =
-						(scrollWidth / verticalScrollHeight) * -scrolled * 0.85;
-				}
-			}
-			//# sourceURL=pen.js
-		</script>
-		<!-- 3d effect animation -->
-		<script>
-			const card = document.querySelector(".test-vloger");
-			const motionMatchMedia = window.matchMedia("(prefers-reduced-motion)");
-			const THRESHOLD = 15;
-
-			/*
-			 * Read the blog post here:
-			 * https://letsbuildui.dev/articles/a-3d-hover-effect-using-css-transforms
-			 */
-			function handleHover(e) {
-				const { clientX, clientY, currentTarget } = e;
-				const { clientWidth, clientHeight, offsetLeft, offsetTop } =
-					currentTarget;
-
-				const horizontal = (clientX - offsetLeft) / clientWidth;
-				const vertical = (clientY - offsetTop) / clientHeight;
-				const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
-				const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
-
-				card.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
-			}
-
-			function resetStyles(e) {
-				card.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
-			}
-
-			if (!motionMatchMedia.matches) {
-				card.addEventListener("mousemove", handleHover);
-				card.addEventListener("mouseleave", resetStyles);
-			}
-		</script>
-		<!-- number count progress script -->
-		<script>
-			function animateValue(obj, start, end, duration) {
-				let startTimestamp = null;
-				const step = (timestamp) => {
-					if (!startTimestamp) startTimestamp = timestamp;
-					const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-					const value = Math.floor(progress * (end - start) + start);
-					if (value > 100000) obj.innerHTML = Math.round(value / 100000) + "L";
-					else if (value > 1000) obj.innerHTML = Math.round(value / 1000) + "K";
-					else obj.innerHTML = Math.round(value) + "";
-					if (progress < 1) {
-						window.requestAnimationFrame(step);
-					}
-				};
-				window.requestAnimationFrame(step);
-			}
-
-			const obj = document.getElementById("value");
-			animateValue(obj, 5000, 3000000, 15000);
-		</script>
-		<!-- Input Focus -->
-		<script>
-			function inputFocus(event) {
-				document.getElementById("profile-outline").style.border =
-					"2px solid white";
-			}
-			function hideBorder() {
-				document.getElementById("profile-outline").style.border =
-					"2px solid #0f0f0f";
-			}
-		</script>
-		<!-- Scroll new design script smooth scroll -->
-		<script id="rendered-js">
-			gsap.registerPlugin(ScrollTrigger);
-
-			const sections = gsap.utils.toArray("section");
-			let maxWidth = 0;
-
-			const getMaxWidth = () => {
-				maxWidth = 0;
-				sections.forEach((section) => {
-					maxWidth += section.offsetWidth;
-				});
-			};
-			getMaxWidth();
-			ScrollTrigger.addEventListener("refreshInit", getMaxWidth);
-
-			gsap.to(sections, {
-				x: () => `-${maxWidth - window.innerWidth}`,
-				ease: "none",
-				scrollTrigger: {
-					trigger: ".wrapper",
-					pin: true,
-					scrub: true,
-					end: () => `+=${maxWidth}`,
-					invalidateOnRefresh: true,
-				},
-			});
-
-			sections.forEach((sct, i) => {
-				ScrollTrigger.create({
-					trigger: sct,
-					start: () =>
-						"top top-=" +
-						(sct.offsetLeft - window.innerWidth / 2) *
-							(maxWidth / (maxWidth - window.innerWidth)),
-					end: () =>
-						"+=" +
-						sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
-					toggleClass: { targets: sct, className: "active" },
-				});
-			});
-			//# sourceURL=pen.js
-		</script>
-		<!--  -->
-	</body>
+      $("#drop-down-arrow").click(function () {
+        event.stopPropagation();
+        $("#child").toggle();
+      });
+    </script>
+    <script src="./index.js"></script>
+  </body>
 </html>

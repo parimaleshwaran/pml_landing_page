@@ -134,28 +134,6 @@ section {
 .wrapper {
 	@apply flex-nowrap -ml-20;
 }
-/* .sticky-parent {
-	@apply h-[500vh] -mx-20;
-}
-.stickyin {
-	@apply sticky top-0 h-[600px] overflow-x-hidden overflow-y-hidden;
-}
-.dim {
-	@apply min-w-[100vw] h-full  w-full flex justify-center items-center;
-}
-.horizontal {
-	@apply flex h-full w-full;
-}
-.dim h2 {
-	@apply text-center font-bold text-white text-[90px] leading-[90px];
-}
-.dim span {
-	@apply text-center font-bold text-[#f5507d] text-[90px] leading-[90px];
-}
-.dim p {
-	@apply text-center font-semibold text-white text-[24px] pt-4 leading-[33.3px];
-} */
-
 /* section three part */
 .land-influ {
 	@apply md:mt-[73px] mt-10 lg:mx-[100px] md:mx-8 mx-4;
@@ -188,13 +166,15 @@ section {
 #select0,
 #select1,
 #select2,
-#select3 {
+#select3,
+#select4 {
 	@apply text-xl font-semibold py-2 pl-3 cursor-pointer;
 }
 #select0:hover,
 #select1:hover,
 #select2:hover,
-#select3:hover {
+#select3:hover,
+#select4:hover {
 	@apply py-2 px-3 rounded-[6px] bg-[#fbe9d5];
 }
 
@@ -306,29 +286,25 @@ iframe.code {
 .earn-m {
 	@apply md:left-[102%] left-[80%] right-0;
 }
-#range {
+#followers-range {
 	@apply md:w-full w-[230px] bg-[rgba(255,255,255,0.2)] rounded-[10px] focus:outline-none;
 	-webkit-appearance: none;
 }
 
-#range::-webkit-slider-runnable-track {
+#followers-range::-webkit-slider-runnable-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animate: 0.2s;
-	background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
-#range::-webkit-slider-thumb {
+#followers-range::-webkit-slider-thumb {
 	@apply rounded-full bg-white h-6 w-6 cursor-pointer;
 	-webkit-appearance: none;
 	transform: translateY(calc(-50% + 5px));
 }
-#tooltip {
+#monthly-post {
 	@apply absolute -bottom-3;
 }
-#tooltip span {
+#monthly-post span {
 	position: absolute;
 	text-align: center;
 	display: block;
@@ -339,29 +315,25 @@ iframe.code {
 	transform: translate(-50%, 0);
 	line-height: 26px;
 }
-#range2 {
+#monthly-post-range {
 	@apply md:w-full w-[230px] bg-[rgba(255,255,255,0.2)] rounded-[10px] focus:outline-none;
 	-webkit-appearance: none;
 }
 
-#range2::-webkit-slider-runnable-track {
+#monthly-post-range::-webkit-slider-runnable-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animate: 0.2s;
-	background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
-#range2::-webkit-slider-thumb {
+#monthly-post-range::-webkit-slider-thumb {
 	@apply rounded-full bg-white h-6 w-6 cursor-pointer;
 	-webkit-appearance: none;
 	transform: translateY(calc(-50% + 5px));
 }
-#tooltip2 {
+#followers {
 	@apply absolute -bottom-3;
 }
-#tooltip2 span {
+#followers span {
 	position: absolute;
 	text-align: center;
 	display: block;
@@ -643,13 +615,7 @@ iframe.code {
 	outline: none !important;
 }
 .land-claim button {
-	background-image: linear-gradient(
-		to right,
-		#edd834,
-		#c7b61c,
-		#ffed5d,
-		#d9e021
-	);
+	background-image: linear-gradient(to right, #edd834, #c7b61c, #ffed5d, #d9e021);
 }
 
 /* image zoom in animation */
@@ -735,8 +701,7 @@ iframe.code {
 	cursor: url(https://pickmyad.com/images/logo.svg), auto;
 }
 .land-influ {
-	cursor: url(https://app.pickmy.link/auth/assets/images/influencer/settings/pickmylink.svg),
-		auto;
+	cursor: url(https://app.pickmy.link/auth/assets/images/influencer/settings/pickmylink.svg), auto;
 }
 /* vloger scroll overwrite */
 .row2::-webkit-scrollbar {
@@ -775,15 +740,8 @@ iframe.code {
 }
 /* mobile view scroll */
 .mobile-scroll {
-	@apply md:hidden block m-auto text-center mt-6;
+	@apply md:hidden block m-auto text-center my-40;
 }
 .pin-spacer {
 	@apply md:block hidden;
 }
-
-/* style="
-						translate: none;
-						rotate: none;
-						scale: none;
-						transform: translate3d(-0.0007px, 0px, 0px);
-						" */
