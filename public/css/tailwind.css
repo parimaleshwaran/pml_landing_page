@@ -551,6 +551,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .visible {
   visibility: visible;
 }
@@ -580,12 +614,24 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.resize {
+  resize: both;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
 .border {
   border-width: 1px;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 html,
@@ -2006,9 +2052,16 @@ iframe.code {
 
 .slide-track2 {
   display: flex;
-  -webkit-animation: scroll 40s linear infinite;
-          animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 100s linear infinite;
+          animation: scroll 100s linear infinite;
   animation-direction: reverse;
+}
+
+@media only screen and (max-width: 425px) {
+  .slide-track2 {
+    -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+  }
 }
 
 .slide-track:hover {
@@ -2838,17 +2891,6 @@ iframe.code {
   width: 0px;
 }
 
-/* .row2::-webkit-scrollbar-track {
-	background: #f1f1f1;
-}
-.row2::-webkit-scrollbar-thumb {
-	background: #888;
-}
-
-.row2::-webkit-scrollbar-thumb:hover {
-	background: #555;
-} */
-
 /* Smooth scroll  */
 
 .mobile-vloger {
@@ -2944,10 +2986,3 @@ iframe.code {
     display: block;
   }
 }
-
-/* style="
-						translate: none;
-						rotate: none;
-						scale: none;
-						transform: translate3d(-0.0007px, 0px, 0px);
-						" */

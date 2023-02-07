@@ -408,8 +408,13 @@ iframe.code {
 
 .slide-track2 {
 	@apply flex;
-	animation: scroll 40s linear infinite;
+	animation: scroll 100s linear infinite;
 	animation-direction: reverse;
+}
+@media only screen and (max-width: 425px) {
+	.slide-track2 {
+		animation: scroll 40s linear infinite;
+	}
 }
 .slide-track:hover {
 	-webkit-animation-play-state: paused;
@@ -742,17 +747,6 @@ iframe.code {
 .row2::-webkit-scrollbar {
 	width: 0px;
 }
-/* .row2::-webkit-scrollbar-track {
-	background: #f1f1f1;
-}
-.row2::-webkit-scrollbar-thumb {
-	background: #888;
-}
-
-.row2::-webkit-scrollbar-thumb:hover {
-	background: #555;
-} */
-
 /* Smooth scroll  */
 .mobile-vloger {
 	@apply md:hidden block md:h-full h-screen bg-[#290038];
@@ -780,10 +774,3 @@ iframe.code {
 .pin-spacer {
 	@apply md:block hidden;
 }
-
-/* style="
-						translate: none;
-						rotate: none;
-						scale: none;
-						transform: translate3d(-0.0007px, 0px, 0px);
-						" */
