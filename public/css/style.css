@@ -773,9 +773,14 @@ iframe.code {
 .mobile-off {
 	@apply md:h-auto h-screen;
 }
+/* mobile view scroll */
 .mobile-scroll {
-	@apply md:hidden block m-auto text-center;
+	@apply md:hidden block m-auto text-center mt-6;
 }
+.pin-spacer {
+	@apply md:block hidden;
+}
+
 /* style="
 						translate: none;
 						rotate: none;

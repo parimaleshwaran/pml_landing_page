@@ -2920,6 +2920,31 @@ iframe.code {
   }
 }
 
+/* mobile view scroll */
+
+.mobile-scroll {
+  margin: auto;
+  margin-top: 1.5rem;
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .mobile-scroll {
+    display: none;
+  }
+}
+
+.pin-spacer {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .pin-spacer {
+    display: block;
+  }
+}
+
 /* style="
 						translate: none;
 						rotate: none;
