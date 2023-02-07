@@ -10,7 +10,7 @@
 		body {
 			margin: 0;
 		}
-		#stage {
+		#stage2 {
 			width: 100%;
 			height: 100vh !important;
 			box-sizing: border-box;
@@ -28,9 +28,9 @@
 		} */
 	</style>
 	<body>
-		<canvas id="stage"></canvas>
+		<canvas class="stage-cls" id="stage2"></canvas>
 		<script>
-			var stage = document.getElementById("stage");
+			var stage = document.getElementById("stage2");
 				cb = stage.getBoundingClientRect(),
 				ctx = stage.getContext("2d"),
 				ratio = window.devicePixelRatio || 1,
