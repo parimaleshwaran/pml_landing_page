@@ -1205,7 +1205,7 @@ section {
   padding-right: 0.75rem;
 }
 
-.land-a p {
+.vloger-choi {
   position: static;
   top: 0px;
   margin-top: 0.625rem;
@@ -1218,7 +1218,7 @@ section {
 }
 
 @media (min-width: 768px) {
-  .land-a p {
+  .vloger-choi {
     position: -webkit-sticky;
     position: sticky;
     top: 100px;
@@ -1230,13 +1230,13 @@ section {
 }
 
 @media (min-width: 1024px) {
-  .land-a p {
+  .vloger-choi {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
-.land-a p {
+.vloger-choi {
   margin-bottom: 0 !important;
 }
 
@@ -1261,7 +1261,7 @@ section {
 .land-vloger img {
   z-index: 10;
   margin: auto;
-  height: 100%;
+  height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -1272,7 +1272,7 @@ section {
 
 @media (min-width: 1024px) {
   .land-vloger img {
-    height: 695px;
+    height: 600px;
   }
 }
 
@@ -1333,8 +1333,26 @@ iframe.code {
   z-index: 10;
   margin: auto;
   height: auto;
-  max-width: 500px;
   background-size: cover;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  .test-vloger {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .test-vloger {
+    padding-top: 46px;
+    padding-bottom: 46px;
+  }
+}
+
+.test-vloger {
   transition: transform 0.1s ease;
   transform-style: preserve-3d;
   will-change: transform;
@@ -1395,6 +1413,7 @@ iframe.code {
 
 .land-lin p {
   margin-bottom: 0 !important;
+  padding-right: 0 !important;
 }
 
 /* progress bar section */
@@ -2850,6 +2869,7 @@ iframe.code {
 .row2 {
   height: auto;
   width: 100%;
+  cursor: alias;
   overflow: auto;
 }
 

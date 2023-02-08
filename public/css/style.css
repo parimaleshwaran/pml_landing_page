@@ -226,7 +226,7 @@ section {
 	@apply py-2 px-3 rounded-[6px] bg-[#fbe9d5];
 }
 
-.land-a p {
+.vloger-choi {
 	@apply lg:text-2xl md:text-xl text-base font-semibold text-[#0f0f0f] md:sticky static md:top-[100px] top-0 md:mt-0 mt-2.5 md:pr-10 pr-0;
 	margin-bottom: 0 !important;
 }
@@ -238,7 +238,7 @@ section {
 }
 
 .land-vloger img {
-	@apply m-auto z-10 lg:h-[695px] md:h-[630px] h-full;
+	@apply m-auto z-10 lg:h-[600px] md:h-[630px] h-screen;
 }
 
 iframe.code {
@@ -270,7 +270,7 @@ iframe.code {
 }
 
 .test-vloger {
-	@apply bg-cover max-w-[500px] m-auto h-auto relative z-10 pointer-events-none;
+	@apply bg-cover m-auto h-auto relative z-10 pointer-events-none lg:py-[46px] md:py-[30px] py-0;
 	transition: transform 0.1s ease;
 	transform-style: preserve-3d;
 	will-change: transform;
@@ -288,8 +288,9 @@ iframe.code {
 }
 
 .land-lin p {
-	@apply text-base font-medium text-[rgba(15,15,15,0.7)] pt-[7px] lg:max-w-[400px] md:max-w-[325px]  mt-0;
+	@apply text-base font-medium text-[rgba(15,15,15,0.7)] pt-[7px] lg:max-w-[400px] md:max-w-[325px] mt-0;
 	margin-bottom: 0 !important;
+	padding-right: 0 !important;
 }
 
 /* progress bar section */
@@ -902,7 +903,7 @@ iframe.code {
 }
 
 .row2 {
-	@apply w-full md:h-[580px] h-auto overflow-auto;
+	@apply w-full md:h-[580px] h-auto overflow-auto cursor-alias;
 }
 
 .mobile {
