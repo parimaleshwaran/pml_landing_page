@@ -21,7 +21,7 @@ for (let i = 0; i < influencerCategories.length; i++) {
 	changeCategory(i, influencerCategories[i]);
 }
 
-document.getElementById("image").src = "./images/camera.png";
+document.getElementById("image").src = "./images/vlog_brand.png";
 document.getElementById("mv-image").src = "./images/man.png";
 
 let renderImage = "vlogger"; // Initialize Influencer Category
