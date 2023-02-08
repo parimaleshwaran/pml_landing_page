@@ -280,7 +280,7 @@ iframe.code {
 /* left side text section */
 
 .land-lin {
-	@apply md:mt-[278px] mt-[36px];
+	@apply md:mt-[100px] mt-[36px];
 }
 
 .land-lin span {
@@ -910,7 +910,7 @@ iframe.code {
 }
 
 .mobile2 {
-	@apply md:block hidden;
+	@apply md:block hidden opacity-50;
 }
 
 .mobile-off {

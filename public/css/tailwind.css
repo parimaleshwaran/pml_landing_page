@@ -1349,7 +1349,7 @@ iframe.code {
 
 @media (min-width: 768px) {
   .land-lin {
-    margin-top: 278px;
+    margin-top: 100px;
   }
 }
 
@@ -2871,6 +2871,7 @@ iframe.code {
 
 .mobile2 {
   display: none;
+  opacity: 0.5;
 }
 
 @media (min-width: 768px) {
