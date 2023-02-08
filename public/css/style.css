@@ -229,7 +229,7 @@ iframe.code {
 
 /* left side text section */
 .land-lin {
-	@apply md:mt-[278px] mt-[36px];
+	@apply md:mt-[100px] mt-[36px];
 }
 .land-lin span {
 	@apply lg:text-[40px] md:text-[30px] text-[40px] font-bold text-[#0f0f0f];
@@ -302,11 +302,7 @@ iframe.code {
 #followers-range::-webkit-slider-runnable-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animate: 0.2s;
-	background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 #followers-range::-webkit-slider-thumb {
 	@apply rounded-full bg-white h-6 w-6 cursor-pointer;
@@ -334,11 +330,7 @@ iframe.code {
 #monthly-post-range::-webkit-slider-runnable-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animate: 0.2s;
-	background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 #monthly-post-range::-webkit-slider-thumb {
 	@apply rounded-full bg-white h-6 w-6 cursor-pointer;
@@ -684,13 +676,7 @@ iframe.code {
 	outline: none !important;
 }
 .land-claim button {
-	background-image: linear-gradient(
-		to right,
-		#edd834,
-		#c7b61c,
-		#ffed5d,
-		#d9e021
-	);
+	background-image: linear-gradient(to right, #edd834, #c7b61c, #ffed5d, #d9e021);
 }
 
 /* image zoom in animation */
@@ -838,7 +824,7 @@ iframe.code {
 	@apply md:hidden block;
 }
 .mobile2 {
-	@apply md:block hidden;
+	@apply md:block hidden opacity-50;
 }
 .mobile-off {
 	@apply md:h-auto h-screen;

@@ -1341,7 +1341,7 @@ iframe.code {
 
 @media (min-width: 768px) {
   .land-lin {
-    margin-top: 278px;
+    margin-top: 100px;
   }
 }
 
@@ -1735,11 +1735,7 @@ iframe.code {
   cursor: pointer;
   border-radius: 20px;
   animate: 0.2s;
-  background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+  background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 
 #followers-range::-webkit-slider-thumb {
@@ -1804,11 +1800,7 @@ iframe.code {
   cursor: pointer;
   border-radius: 20px;
   animate: 0.2s;
-  background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+  background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 
 #monthly-post-range::-webkit-slider-thumb {
@@ -2684,13 +2676,7 @@ iframe.code {
   transition: all 0.4s ease-in-out;
   background-size: 300% 100%;
   outline: none !important;
-  background-image: linear-gradient(
-		to right,
-		#edd834,
-		#c7b61c,
-		#ffed5d,
-		#d9e021
-	);
+  background-image: linear-gradient(to right, #edd834, #c7b61c, #ffed5d, #d9e021);
 }
 
 /* image zoom in animation */
@@ -3030,6 +3016,7 @@ iframe.code {
 
 .mobile2 {
   display: none;
+  opacity: 0.5;
 }
 
 @media (min-width: 768px) {
