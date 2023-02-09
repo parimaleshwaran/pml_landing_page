@@ -471,6 +471,10 @@ iframe.code {
 	-moz-transform: translate(-50%, 0);
 }
 
+.star {
+	@apply text-[rgba(255,255,255,0.2)] font-light;
+}
+
 .rangein {
 	@apply mt-[32px];
 }

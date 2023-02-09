@@ -46,7 +46,7 @@ document.getElementById("scroll-app").onscroll = function () {
 	if (document.getElementById("scroll-app").scrollTop > 45) {
 		document.getElementById("profile-link").style.opacity = 0.5;
 		document.getElementById("brand-collaboration").style.opacity = 1;
-		document.getElementById("land-change").style.backgroundColor = "#290038";
+		document.getElementById("land-change").style.backgroundColor = "#B4B719";
 		document.getElementById("brand-collaboration").style.marginTop = "100px";
 		brandCollaboration(renderImage);
 	}
@@ -65,8 +65,8 @@ function profileLink(type) {
 		document.getElementById("mv-image").src = "./images/vlog_brand.png";
 	}
 	if (type == "gammer") {
-		document.getElementById("image").src = "./images/man.png";
-		document.getElementById("mv-image").src = "./images/camera.png";
+		document.getElementById("image").src = "./images/gamer_links.png";
+		document.getElementById("mv-image").src = "./images/gamer_brand.png";
 	}
 	if (type == "petfluencer") {
 		document.getElementById("image").src = "./images/camera.png";
@@ -88,8 +88,8 @@ function brandCollaboration(type) {
 		document.getElementById("mv-image").src = "./images/vlog_links.png";
 	}
 	if (type == "gammer") {
-		document.getElementById("image").src = "./images/camera.png";
-		document.getElementById("mv-image").src = "./images/man.png";
+		document.getElementById("image").src = "./images/gamer_brand.png";
+		document.getElementById("mv-image").src = "./images/gamer_links.png";
 	}
 	if (type == "petfluencer") {
 		document.getElementById("image").src = "./images/man.png";
@@ -244,3 +244,12 @@ function mobileViewScroll() {
 		}
 	}
 }
+// Enter buttton go to signup
+
+let content = document.getElementById("myClaim");
+content.addEventListener("keyup", function (event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		document.getElementById("myLink").click();
+	}
+});

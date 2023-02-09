@@ -1928,6 +1928,11 @@ iframe.code {
   -moz-transform: translate(-50%, 0);
 }
 
+.star {
+  font-weight: 300;
+  color: rgba(255,255,255,0.2);
+}
+
 .rangein {
   margin-top: 32px;
 }
