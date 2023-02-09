@@ -280,7 +280,7 @@ iframe.code {
 /* left side text section */
 
 .land-lin {
-	@apply md:mt-[100px] mt-[36px];
+	@apply md:mt-[200px] mt-[36px];
 }
 
 .land-lin span {
@@ -374,21 +374,13 @@ iframe.code {
 #followers-range::-webkit-slider-runnable-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animation: 0.2s;
-	background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 
 #followers-range::-moz-range-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animation: 0.2s;
-	background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 
 #followers-range::-webkit-slider-thumb {
@@ -426,21 +418,13 @@ iframe.code {
 #monthly-post-range::-webkit-slider-runnable-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animation: 0.2s;
-	background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 
 #monthly-post-range::-moz-range-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animation: 0.2s;
-	background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 
 #monthly-post-range::-webkit-slider-thumb {
@@ -869,13 +853,7 @@ iframe.code {
 }
 
 .land-claim button {
-	background-image: linear-gradient(
-		to right,
-		#edd834,
-		#c7b61c,
-		#ffed5d,
-		#d9e021
-	);
+	background-image: linear-gradient(to right, #edd834, #c7b61c, #ffed5d, #d9e021);
 }
 
 .row2 {
@@ -907,7 +885,7 @@ iframe.code {
 }
 
 .row2 {
-	@apply w-full md:h-[580px] h-auto overflow-auto cursor-alias;
+	@apply w-full md:h-[690px] h-auto overflow-auto cursor-alias;
 }
 
 .mobile {

@@ -1367,7 +1367,7 @@ iframe.code {
 
 @media (min-width: 768px) {
   .land-lin {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 }
 
@@ -1765,11 +1765,7 @@ iframe.code {
   border-radius: 20px;
   -webkit-animation: 0.2s;
           animation: 0.2s;
-  background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+  background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 
 #followers-range::-moz-range-track {
@@ -1778,11 +1774,7 @@ iframe.code {
   cursor: pointer;
   border-radius: 20px;
   animation: 0.2s;
-  background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+  background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 
 #followers-range::-webkit-slider-thumb {
@@ -1861,11 +1853,7 @@ iframe.code {
   border-radius: 20px;
   -webkit-animation: 0.2s;
           animation: 0.2s;
-  background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+  background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 
 #monthly-post-range::-moz-range-track {
@@ -1874,11 +1862,7 @@ iframe.code {
   cursor: pointer;
   border-radius: 20px;
   animation: 0.2s;
-  background: linear-gradient(
-		90deg,
-		#ffa42b var(--range-progress),
-		rgba(255, 255, 255, 0.2) var(--range-progress)
-	);
+  background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
 }
 
 #monthly-post-range::-webkit-slider-thumb {
@@ -2815,13 +2799,7 @@ iframe.code {
   transition: all 0.4s ease-in-out;
   background-size: 300% 100%;
   outline: none !important;
-  background-image: linear-gradient(
-		to right,
-		#edd834,
-		#c7b61c,
-		#ffed5d,
-		#d9e021
-	);
+  background-image: linear-gradient(to right, #edd834, #c7b61c, #ffed5d, #d9e021);
 }
 
 .row2 {
@@ -2880,7 +2858,7 @@ iframe.code {
 
 @media (min-width: 768px) {
   .row2 {
-    height: 580px;
+    height: 690px;
   }
 }
 

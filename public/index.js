@@ -23,6 +23,7 @@ for (let i = 0; i < influencerCategories.length; i++) {
 
 document.getElementById("image").src = "./images/vlog_links.png";
 document.getElementById("mv-image").src = "./images/vlog_brand.png";
+document.getElementById("brand-collaboration").style.marginTop = "100px";
 
 let renderImage = "vlogger"; // Initialize Influencer Category
 document.getElementById("mainDiv").innerHTML = influencerCategories[0].name;
@@ -51,7 +52,7 @@ document.getElementById("scroll-app").onscroll = function () {
   }
   if (document.getElementById("scroll-app").scrollTop < 20) {
     document.getElementById("land-change").style.backgroundColor = "#ffa42b";
-    document.getElementById("brand-collaboration").style.marginTop = "100px";
+    document.getElementById("brand-collaboration").style.marginTop = "119px";
     document.getElementById("profile-link").style.opacity = 1;
     document.getElementById("brand-collaboration").style.opacity = 0.5;
     profileLink(renderImage);
