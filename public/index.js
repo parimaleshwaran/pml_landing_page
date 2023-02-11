@@ -2,11 +2,11 @@ let isMobileView = window.innerWidth <= 425;
 
 // Influencer Categories
 const influencerCategories = [
+  { slug: "foodie", name: "Foodie", imgUrl: "" },
   { slug: "vlogger", name: "Vlogger", imgUrl: "" },
   { slug: "gammer", name: "Gammer", imgUrl: "" },
   { slug: "petfluencer", name: "Petfluencer", imgUrl: "" },
   { slug: "trainer-coach", name: "Trainer / Coach", imgUrl: "" },
-  { slug: "foodie", name: "Foodie", imgUrl: "" },
 ];
 
 for (let i = 0; i < influencerCategories.length; i++) {
@@ -21,8 +21,8 @@ for (let i = 0; i < influencerCategories.length; i++) {
   changeCategory(i, influencerCategories[i]);
 }
 
-document.getElementById("image").src = "./images/vlog_links.png";
-document.getElementById("mv-image").src = "./images/vlog_brand.png";
+document.getElementById("image").src = "./images/foodie_links.png";
+document.getElementById("mv-image").src = "./images/foodie_brand.png";
 document.getElementById("brand-collaboration").style.marginTop = "100px";
 
 let renderImage = "vlogger"; // Initialize Influencer Category
@@ -69,16 +69,16 @@ function profileLink(type) {
     document.getElementById("mv-image").src = "./images/gamer_brand.png";
   }
   if (type == "petfluencer") {
-    document.getElementById("image").src = "./images/camera.png";
-    document.getElementById("mv-image").src = "./images/man.png";
+    document.getElementById("image").src = "./images/petfluencer_links.png";
+    document.getElementById("mv-image").src = "./images/petfluencer_brand.png";
   }
   if (type == "trainer-coach") {
-    document.getElementById("image").src = "./images/man.png";
-    document.getElementById("mv-image").src = "./images/camera.png";
+    document.getElementById("image").src = "./images/trainer_links.png";
+    document.getElementById("mv-image").src = "./images/trainer_brand.png";
   }
   if (type == "foodie") {
-    document.getElementById("image").src = "./images/man.png";
-    document.getElementById("mv-image").src = "./images/camera.png";
+    document.getElementById("image").src = "./images/foodie_links.png";
+    document.getElementById("mv-image").src = "./images/foodie_brand.png";
   }
 }
 
@@ -92,16 +92,16 @@ function brandCollaboration(type) {
     document.getElementById("mv-image").src = "./images/gamer_links.png";
   }
   if (type == "petfluencer") {
-    document.getElementById("image").src = "./images/man.png";
-    document.getElementById("mv-image").src = "./images/camera.png";
+    document.getElementById("image").src = "./images/petfluencer_brand.png";
+    document.getElementById("mv-image").src = "./images/petfluencer_links.png";
   }
   if (type == "trainer-coach") {
-    document.getElementById("image").src = "./images/camera.png";
-    document.getElementById("mv-image").src = "./images/man.png";
+    document.getElementById("image").src = "./images/trainer_brand.png";
+    document.getElementById("mv-image").src = "./images/trainer_links.png";
   }
   if (type == "foodie") {
-    document.getElementById("image").src = "./images/camera.png";
-    document.getElementById("mv-image").src = "./images/man.png";
+    document.getElementById("image").src = "./images/foodie_brand.png";
+    document.getElementById("mv-image").src = "./images/foodie_links.png";
   }
 }
 
