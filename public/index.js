@@ -101,7 +101,7 @@ function profileLink(type) {
 			"pet platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
 		document.getElementById("brand-collab").innerHTML =
 			"pet platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
-		document.getElementById("brand-mobile").innerHTML =
+		document.getElementById("brand-collab").innerHTML =
 			"pet platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
 	}
 	if (type == "trainer-coach") {
