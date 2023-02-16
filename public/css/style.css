@@ -203,7 +203,7 @@ section {
 }
 
 .influ-vlog {
-	@apply lg:text-[30px] md:text-[20px] text-[36px] rounded-[50px] pr-2.5 md:pl-[32px] pl-5 cursor-pointer font-bold text-[#1a61e9];
+	@apply lg:text-[30px] md:text-[20px] text-[30px] rounded-[50px] pr-2.5 md:pl-[32px] pl-5 cursor-pointer font-bold text-[#1a61e9];
 }
 
 .infludrop-btn {
@@ -374,13 +374,21 @@ iframe.code {
 #followers-range::-webkit-slider-runnable-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animation: 0.2s;
-	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
+	background: linear-gradient(
+		90deg,
+		#ffa42b var(--range-progress),
+		rgba(255, 255, 255, 0.2) var(--range-progress)
+	);
 }
 
 #followers-range::-moz-range-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animation: 0.2s;
-	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
+	background: linear-gradient(
+		90deg,
+		#ffa42b var(--range-progress),
+		rgba(255, 255, 255, 0.2) var(--range-progress)
+	);
 }
 
 #followers-range::-webkit-slider-thumb {
@@ -418,13 +426,21 @@ iframe.code {
 #monthly-post-range::-webkit-slider-runnable-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animation: 0.2s;
-	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
+	background: linear-gradient(
+		90deg,
+		#ffa42b var(--range-progress),
+		rgba(255, 255, 255, 0.2) var(--range-progress)
+	);
 }
 
 #monthly-post-range::-moz-range-track {
 	@apply w-full h-2.5 cursor-pointer rounded-[20px];
 	animation: 0.2s;
-	background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
+	background: linear-gradient(
+		90deg,
+		#ffa42b var(--range-progress),
+		rgba(255, 255, 255, 0.2) var(--range-progress)
+	);
 }
 
 #monthly-post-range::-webkit-slider-thumb {
@@ -853,7 +869,13 @@ iframe.code {
 }
 
 .land-claim button {
-	background-image: linear-gradient(to right, #edd834, #c7b61c, #ffed5d, #d9e021);
+	background-image: linear-gradient(
+		to right,
+		#edd834,
+		#c7b61c,
+		#ffed5d,
+		#d9e021
+	);
 }
 
 .row2 {

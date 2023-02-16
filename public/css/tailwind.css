@@ -559,6 +559,10 @@ video {
   flex-shrink: 0;
 }
 
+.grow {
+  flex-grow: 1;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1133,7 +1137,7 @@ section {
   border-radius: 50px;
   padding-right: 0.625rem;
   padding-left: 1.25rem;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(26 97 233 / var(--tw-text-opacity));
@@ -1765,7 +1769,11 @@ iframe.code {
   border-radius: 20px;
   -webkit-animation: 0.2s;
           animation: 0.2s;
-  background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
+  background: linear-gradient(
+		90deg,
+		#ffa42b var(--range-progress),
+		rgba(255, 255, 255, 0.2) var(--range-progress)
+	);
 }
 
 #followers-range::-moz-range-track {
@@ -1774,7 +1782,11 @@ iframe.code {
   cursor: pointer;
   border-radius: 20px;
   animation: 0.2s;
-  background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
+  background: linear-gradient(
+		90deg,
+		#ffa42b var(--range-progress),
+		rgba(255, 255, 255, 0.2) var(--range-progress)
+	);
 }
 
 #followers-range::-webkit-slider-thumb {
@@ -1853,7 +1865,11 @@ iframe.code {
   border-radius: 20px;
   -webkit-animation: 0.2s;
           animation: 0.2s;
-  background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
+  background: linear-gradient(
+		90deg,
+		#ffa42b var(--range-progress),
+		rgba(255, 255, 255, 0.2) var(--range-progress)
+	);
 }
 
 #monthly-post-range::-moz-range-track {
@@ -1862,7 +1878,11 @@ iframe.code {
   cursor: pointer;
   border-radius: 20px;
   animation: 0.2s;
-  background: linear-gradient(90deg, #ffa42b var(--range-progress), rgba(255, 255, 255, 0.2) var(--range-progress));
+  background: linear-gradient(
+		90deg,
+		#ffa42b var(--range-progress),
+		rgba(255, 255, 255, 0.2) var(--range-progress)
+	);
 }
 
 #monthly-post-range::-webkit-slider-thumb {
@@ -2799,7 +2819,13 @@ iframe.code {
   transition: all 0.4s ease-in-out;
   background-size: 300% 100%;
   outline: none !important;
-  background-image: linear-gradient(to right, #edd834, #c7b61c, #ffed5d, #d9e021);
+  background-image: linear-gradient(
+		to right,
+		#edd834,
+		#c7b61c,
+		#ffed5d,
+		#d9e021
+	);
 }
 
 .row2 {
