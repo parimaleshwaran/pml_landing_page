@@ -2,11 +2,11 @@ let isMobileView = window.innerWidth <= 425;
 
 // Influencer Categories
 const influencerCategories = [
+	{ slug: "foodie", name: "Foodie", imgUrl: "" },
 	{ slug: "vlogger", name: "Vlogger", imgUrl: "" },
 	{ slug: "gammer", name: "Gammer", imgUrl: "" },
 	{ slug: "petfluencer", name: "Petfluencer", imgUrl: "" },
 	{ slug: "trainer-coach", name: "Trainer / Coach", imgUrl: "" },
-	{ slug: "foodie", name: "Foodie", imgUrl: "" },
 ];
 
 for (let i = 0; i < influencerCategories.length; i++) {
@@ -21,13 +21,19 @@ for (let i = 0; i < influencerCategories.length; i++) {
 	changeCategory(i, influencerCategories[i]);
 }
 
-document.getElementById("image").src = "./images/vlog_links.png";
-document.getElementById("mv-image").src = "./images/vlog_brand.png";
+document.getElementById("image").src = "./images/foodie_links.png";
+document.getElementById("mv-image").src = "./images/foodie_brand.png";
 document.getElementById("brand-collaboration").style.marginTop = "100px";
-// document.getElementById("link-content").innerHTML = "";
-// document.getElementById("brand-content").innerHTML = "";
+document.getElementById("influencer-list").innerHTML =
+	"Share your culinary journeys and connect with food lovers.";
+document.getElementById("profile-li").innerHTML =
+	"Perfect platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+document.getElementById("brand-collab").innerHTML =
+	"Brand platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+document.getElementById("brand-mobile").innerHTML =
+	"Brand platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
 
-let renderImage = "vlogger"; // Initialize Influencer Category
+let renderImage = "foodie"; // Initialize Influencer Category
 document.getElementById("mainDiv").innerHTML = influencerCategories[0].name;
 
 function changeCategory(index, value) {
@@ -48,12 +54,14 @@ document.getElementById("scroll-app").onscroll = function () {
 	if (document.getElementById("scroll-app").scrollTop > 35) {
 		document.getElementById("profile-link").style.opacity = 0.5;
 		document.getElementById("brand-collaboration").style.opacity = 1;
-		document.getElementById("land-change").style.backgroundColor = "#B4B719";
+		// document.getElementById("land-change").style.backgroundColor = "#45b9bc";
 		document.getElementById("brand-collaboration").style.marginTop = "100px";
 		brandCollaboration(renderImage);
 	}
 	if (document.getElementById("scroll-app").scrollTop < 20) {
-		document.getElementById("land-change").style.backgroundColor = "#ffa42b";
+		document.getElementById("land-change").style.backgroundColor = "#ffd859";
+		// document.getElementById("land-mobile").style.backgroundColor = "#ff98bd";
+
 		document.getElementById("brand-collaboration").style.marginTop = "119px";
 		document.getElementById("profile-link").style.opacity = 1;
 		document.getElementById("brand-collaboration").style.opacity = 0.5;
@@ -65,23 +73,72 @@ function profileLink(type) {
 	if (type == "vlogger") {
 		document.getElementById("image").src = "./images/vlog_links.png";
 		document.getElementById("mv-image").src = "./images/vlog_brand.png";
+		document.getElementById("influencer-list").innerHTML =
+			"Share your latest adventures with the world in one link in data djhbfjb sfv .";
+		document.getElementById("profile-li").innerHTML =
+			"With PickMy.link, you can share your vlogs in unlimited ways on your personalised microsite. Engage with your followers, stay connected and earn money all in one place - for free, forever.";
+		document.getElementById("brand-collab").innerHTML =
+			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard.";
+		document.getElementById("brand-mobile").innerHTML =
+			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard.";
+		document.getElementById("land-change").style.backgroundColor = "#ff98bd";
+		document.getElementById("land-mobile").style.backgroundColor = "#ff98bd";
 	}
 	if (type == "gammer") {
 		document.getElementById("image").src = "./images/gamer_links.png";
 		document.getElementById("mv-image").src = "./images/gamer_brand.png";
+		document.getElementById("influencer-list").innerHTML =
+			"Showcase your gaming skills and connect with your audience.";
+		document.getElementById("profile-li").innerHTML =
+			"Profile-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-collab").innerHTML =
+			"Brand-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-mobile").innerHTML =
+			"Brand-Mobile-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("land-change").style.backgroundColor = "brown";
+		document.getElementById("land-mobile").style.backgroundColor = "brown";
 	}
 	if (type == "petfluencer") {
-		document.getElementById("image").src = "./images/petinfluencer_links.png";
-		document.getElementById("mv-image").src =
-			"./images/petinfluencer_brand.png";
+		document.getElementById("image").src = "./images/petfluencer_links.png";
+		document.getElementById("mv-image").src = "./images/petfluencer_brand.png";
+		document.getElementById("influencer-list").innerHTML =
+			"Share your love for pets and build your pet-loving community.";
+		document.getElementById("profile-li").innerHTML =
+			"Profile-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-collab").innerHTML =
+			"Brand-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-mobile").innerHTML =
+			"Brand-Mobile-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("land-change").style.backgroundColor = "#00c2cb";
+		document.getElementById("land-mobile").style.backgroundColor = "#00c2cb";
 	}
 	if (type == "trainer-coach") {
-		document.getElementById("image").src = "./images/man.png";
-		document.getElementById("mv-image").src = "./images/camera.png";
+		document.getElementById("image").src = "./images/trainer_links.png";
+		document.getElementById("mv-image").src = "./images/trainer_brand.png";
+		document.getElementById("influencer-list").innerHTML =
+			"Inspire and motivate others with your expert knowledge and skills.";
+		document.getElementById("profile-li").innerHTML =
+			"Profile-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-collab").innerHTML =
+			"Brand-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-mobile").innerHTML =
+			"Brand-Mobile-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("land-change").style.backgroundColor = "#e58d05";
+		document.getElementById("land-mobile").style.backgroundColor = "#e58d05";
 	}
 	if (type == "foodie") {
-		document.getElementById("image").src = "./images/man.png";
-		document.getElementById("mv-image").src = "./images/camera.png";
+		document.getElementById("image").src = "./images/foodie_links.png";
+		document.getElementById("mv-image").src = "./images/foodie_brand.png";
+		document.getElementById("influencer-list").innerHTML =
+			"Share your culinary journeys and connect with food lovers.";
+		document.getElementById("profile-li").innerHTML =
+			"Profile-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-collab").innerHTML =
+			"Brand-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-mobile").innerHTML =
+			"Brand-Mobile-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("land-change").style.backgroundColor = "#ffd859";
+		document.getElementById("land-mobile").style.backgroundColor = "#ffd859";
 	}
 }
 
@@ -89,23 +146,73 @@ function brandCollaboration(type) {
 	if (type == "vlogger") {
 		document.getElementById("image").src = "./images/vlog_brand.png";
 		document.getElementById("mv-image").src = "./images/vlog_links.png";
+		document.getElementById("influencer-list").innerHTML =
+			"Share your latest adventures with the world in one link.skjtgijsg irjghrsijh";
+		document.getElementById("profile-li").innerHTML =
+			"With PickMy.link, you can share your vlogs in unlimited ways on your personalised microsite. Engage with your followers, stay connected and earn money all in one place - for free, forever.";
+		document.getElementById("brand-collab").innerHTML =
+			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard.";
+		document.getElementById("brand-mobile").innerHTML =
+			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard.";
+		document.getElementById("land-change").style.backgroundColor = "#ff98bd";
+		document.getElementById("land-mobile").style.backgroundColor = "#ff98bd";
 	}
 	if (type == "gammer") {
+		console.log(type);
 		document.getElementById("image").src = "./images/gamer_brand.png";
 		document.getElementById("mv-image").src = "./images/gamer_links.png";
+		document.getElementById("influencer-list").innerHTML =
+			"Showcase your gaming skills and connect with your audience.";
+		document.getElementById("profile-li").innerHTML =
+			"Profile-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-collab").innerHTML =
+			"Brand-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-mobile").innerHTML =
+			"Brand-Mobile-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("land-change").style.backgroundColor = "brown";
+		document.getElementById("land-mobile").style.backgroundColor = "brown";
 	}
 	if (type == "petfluencer") {
-		document.getElementById("image").src = "./images/petinfluencer_brand.png";
-		document.getElementById("mv-image").src =
-			"./images/petinfluencer_links.png";
+		document.getElementById("image").src = "./images/petfluencer_brand.png";
+		document.getElementById("mv-image").src = "./images/petfluencer_links.png";
+		document.getElementById("influencer-list").innerHTML =
+			"Share your love for pets and build your pet-loving community.";
+		document.getElementById("profile-li").innerHTML =
+			"Profile-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-collab").innerHTML =
+			"Brand-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-mobile").innerHTML =
+			"Brand-Mobile-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("land-change").style.backgroundColor = "#00c2cb";
+		document.getElementById("land-mobile").style.backgroundColor = "#00c2cb";
 	}
 	if (type == "trainer-coach") {
-		document.getElementById("image").src = "./images/camera.png";
-		document.getElementById("mv-image").src = "./images/man.png";
+		document.getElementById("image").src = "./images/trainer_brand.png";
+		document.getElementById("mv-image").src = "./images/trainer_links.png";
+		document.getElementById("influencer-list").innerHTML =
+			"Inspire and motivate others with your expert knowledge and skills.";
+		document.getElementById("profile-li").innerHTML =
+			"Profile-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-collab").innerHTML =
+			"Brand-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-mobile").innerHTML =
+			"Brand-Mobile-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("land-change").style.backgroundColor = "#e58d05";
+		document.getElementById("land-mobile").style.backgroundColor = "#e58d05";
 	}
 	if (type == "foodie") {
-		document.getElementById("image").src = "./images/camera.png";
-		document.getElementById("mv-image").src = "./images/man.png";
+		document.getElementById("image").src = "./images/foodie_brand.png";
+		document.getElementById("mv-image").src = "./images/foodie_links.png";
+		document.getElementById("influencer-list").innerHTML =
+			"Share your culinary journeys and connect with food lovers.";
+		document.getElementById("profile-li").innerHTML =
+			"Profile-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-collab").innerHTML =
+			"Brand-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("brand-mobile").innerHTML =
+			"Brand-Mobile-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+		document.getElementById("land-change").style.backgroundColor = "#ffd859";
+		document.getElementById("land-mobile").style.backgroundColor = "#ffd859";
 	}
 }
 
