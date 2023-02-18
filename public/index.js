@@ -25,13 +25,13 @@ document.getElementById("image").src = "./images/foodie_links.png";
 document.getElementById("mv-image").src = "./images/foodie_brand.png";
 document.getElementById("brand-collaboration").style.marginTop = "100px";
 document.getElementById("influencer-list").innerHTML =
-	"Share your culinary journeys and connect with food lovers.";
+	" Share your culinary journeys and connect with food lovers.";
 document.getElementById("profile-li").innerHTML =
-	"Perfect platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+	"One-stop ideal platform for foodies to showcase your recipes, food reviews and cooking tips. With PickMy link's microsite, foodies can create a personalised hub for all their food-related content and stay connected with their followers in a more engaging way.";
 document.getElementById("brand-collab").innerHTML =
-	"Brand platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+	"Build meaningful relationships with food brands in the most secure way! Collaboration with your favourite food brands.";
 document.getElementById("brand-mobile").innerHTML =
-	"Brand platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+	"Build meaningful relationships with food brands in the most secure way! Collaboration with your favourite food brands.";
 
 let renderImage = "foodie"; // Initialize Influencer Category
 document.getElementById("mainDiv").innerHTML = influencerCategories[0].name;
@@ -54,14 +54,13 @@ document.getElementById("scroll-app").onscroll = function () {
 	if (document.getElementById("scroll-app").scrollTop > 35) {
 		document.getElementById("profile-link").style.opacity = 0.5;
 		document.getElementById("brand-collaboration").style.opacity = 1;
-		// document.getElementById("land-change").style.backgroundColor = "#45b9bc";
+		document.getElementById("land-change").style.backgroundColor = "#45b9bc";
 		document.getElementById("brand-collaboration").style.marginTop = "100px";
 		brandCollaboration(renderImage);
 	}
 	if (document.getElementById("scroll-app").scrollTop < 20) {
 		document.getElementById("land-change").style.backgroundColor = "#ffd859";
 		// document.getElementById("land-mobile").style.backgroundColor = "#ff98bd";
-
 		document.getElementById("brand-collaboration").style.marginTop = "119px";
 		document.getElementById("profile-link").style.opacity = 1;
 		document.getElementById("brand-collaboration").style.opacity = 0.5;
@@ -74,29 +73,31 @@ function profileLink(type) {
 		document.getElementById("image").src = "./images/vlog_links.png";
 		document.getElementById("mv-image").src = "./images/vlog_brand.png";
 		document.getElementById("influencer-list").innerHTML =
-			"Share your latest adventures with the world in one link in data djhbfjb sfv .";
+			"Share your latest adventures with the world in one link.Effortlessly Manage Links,Grow Presence.";
 		document.getElementById("profile-li").innerHTML =
 			"With PickMy.link, you can share your vlogs in unlimited ways on your personalised microsite. Engage with your followers, stay connected and earn money all in one place - for free, forever.";
 		document.getElementById("brand-collab").innerHTML =
-			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard.";
+			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard. ofkhxmn pf yhpksl";
 		document.getElementById("brand-mobile").innerHTML =
-			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard.";
-		document.getElementById("land-change").style.backgroundColor = "#ff98bd";
-		document.getElementById("land-mobile").style.backgroundColor = "#ff98bd";
+			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard. okfymynso oksrtmhokdo";
+		document.getElementById("land-change").style.backgroundColor = "#ffa42b";
+		document.getElementById("land-mobile").style.backgroundColor = "#b71952";
 	}
 	if (type == "gammer") {
 		document.getElementById("image").src = "./images/gamer_links.png";
 		document.getElementById("mv-image").src = "./images/gamer_brand.png";
 		document.getElementById("influencer-list").innerHTML =
-			"Showcase your gaming skills and connect with your audience.";
+			"Showcase your gaming skills and connect with your followers.";
 		document.getElementById("profile-li").innerHTML =
-			"Profile-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"Gaming Influencers can now take their gaming content to the next level with PickMy link. With the platform's microsite, they can easily share all their gaming content in one place and engage with their followers on a deeper level.";
 		document.getElementById("brand-collab").innerHTML =
-			"Brand-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"A link in your bio can earn more for each game! Promote products from brands on your content or use an affiliate link on your microsite, either way your game will be upped!";
 		document.getElementById("brand-mobile").innerHTML =
-			"Brand-Mobile-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
-		document.getElementById("land-change").style.backgroundColor = "brown";
-		document.getElementById("land-mobile").style.backgroundColor = "brown";
+			"A link in your bio can earn more for each game! Promote products from brands on your content or use an affiliate link on your microsite, either way your game will be upped!";
+		document.getElementById("land-change").style.backgroundImage =
+			"linear-gradient(to left, #fcb4b4, #e1adfa)";
+		document.getElementById("land-mobile").style.backgroundImage =
+			"linear-gradient(to left, #66a6ff, #89f7fe)";
 	}
 	if (type == "petfluencer") {
 		document.getElementById("image").src = "./images/petfluencer_links.png";
@@ -104,13 +105,14 @@ function profileLink(type) {
 		document.getElementById("influencer-list").innerHTML =
 			"Share your love for pets and build your pet-loving community.";
 		document.getElementById("profile-li").innerHTML =
-			"Profile-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"It's you or your pet, both can have a personalized ‘pet’ site to unleash all your content. Share it through PickMy.link’s specially designed platform and see your follower count grow as more people are exposed to your message.";
 		document.getElementById("brand-collab").innerHTML =
-			"Brand-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"At PickMy.Link, our goal is to make influencer marketing easier than ever before. Forget about spending hours trying to build relationships with brands - let PickMy.Link help make it easier for you!";
 		document.getElementById("brand-mobile").innerHTML =
-			"Brand-Mobile-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
-		document.getElementById("land-change").style.backgroundColor = "#00c2cb";
-		document.getElementById("land-mobile").style.backgroundColor = "#00c2cb";
+			"At PickMy.Link, our goal is to make influencer marketing easier than ever before. Forget about spending hours trying to build relationships with brands - let PickMy.Link help make it easier for you!";
+		document.getElementById("land-change").style.backgroundImage =
+			"linear-gradient(to left, #ffb199, #e32c58)";
+		document.getElementById("land-mobile").style.backgroundColor = "#3d0b3e";
 	}
 	if (type == "trainer-coach") {
 		document.getElementById("image").src = "./images/trainer_links.png";
@@ -118,25 +120,26 @@ function profileLink(type) {
 		document.getElementById("influencer-list").innerHTML =
 			"Inspire and motivate others with your expert knowledge and skills.";
 		document.getElementById("profile-li").innerHTML =
-			"Profile-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"Hey Trainers and coaches, now you can focus on building your brand and engaging with your followers on a more personal level with our microsite. You can easily share all their content, training programs and services in one place and stand out from the competition.";
 		document.getElementById("brand-collab").innerHTML =
-			"Brand-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"Be part of the growing community with access to dozens of tools that help you to get collaborations, manage brand campaigns and monetize your content and stay connected with your clients.";
 		document.getElementById("brand-mobile").innerHTML =
-			"Brand-Mobile-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
-		document.getElementById("land-change").style.backgroundColor = "#e58d05";
-		document.getElementById("land-mobile").style.backgroundColor = "#e58d05";
+			"Be part of the growing community with access to dozens of tools that help you to get collaborations, manage brand campaigns and monetize your content and stay connected with your clients.";
+		document.getElementById("land-change").style.backgroundImage =
+			"linear-gradient(220deg, #d858cb, #7292f7)";
+		document.getElementById("land-mobile").style.backgroundColor = "#2e2d32";
 	}
 	if (type == "foodie") {
 		document.getElementById("image").src = "./images/foodie_links.png";
 		document.getElementById("mv-image").src = "./images/foodie_brand.png";
 		document.getElementById("influencer-list").innerHTML =
-			"Share your culinary journeys and connect with food lovers.";
+			" Share your culinary journeys and connect with food lovers.";
 		document.getElementById("profile-li").innerHTML =
-			"Profile-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"One-stop ideal platform for foodies to showcase your recipes, food reviews and cooking tips. With PickMy link's microsite, foodies can create a personalised hub for all their food-related content and stay connected with their followers in a more engaging way.";
 		document.getElementById("brand-collab").innerHTML =
-			"Brand-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"Build meaningful relationships with food brands in the most secure way! Collaboration with your favourite food brands.";
 		document.getElementById("brand-mobile").innerHTML =
-			"Brand-Mobile-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"Build meaningful relationships with food brands in the most secure way! Collaboration with your favourite food brands.";
 		document.getElementById("land-change").style.backgroundColor = "#ffd859";
 		document.getElementById("land-mobile").style.backgroundColor = "#ffd859";
 	}
@@ -147,30 +150,32 @@ function brandCollaboration(type) {
 		document.getElementById("image").src = "./images/vlog_brand.png";
 		document.getElementById("mv-image").src = "./images/vlog_links.png";
 		document.getElementById("influencer-list").innerHTML =
-			"Share your latest adventures with the world in one link.skjtgijsg irjghrsijh";
+			"Share your latest adventures with the world in one link.Effortlessly Manage Links, Grow Presence.";
 		document.getElementById("profile-li").innerHTML =
 			"With PickMy.link, you can share your vlogs in unlimited ways on your personalised microsite. Engage with your followers, stay connected and earn money all in one place - for free, forever.";
 		document.getElementById("brand-collab").innerHTML =
-			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard.";
+			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard. kjdxhjrx kdrydho";
 		document.getElementById("brand-mobile").innerHTML =
-			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard.";
-		document.getElementById("land-change").style.backgroundColor = "#ff98bd";
-		document.getElementById("land-mobile").style.backgroundColor = "#ff98bd";
+			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard. dtkljnsghkrj sjrnoj krbsjjr";
+		document.getElementById("land-change").style.backgroundColor = "#b71952";
+		document.getElementById("land-mobile").style.backgroundColor = "#b71952";
 	}
 	if (type == "gammer") {
 		console.log(type);
 		document.getElementById("image").src = "./images/gamer_brand.png";
 		document.getElementById("mv-image").src = "./images/gamer_links.png";
 		document.getElementById("influencer-list").innerHTML =
-			"Showcase your gaming skills and connect with your audience.";
+			"Showcase your gaming skills and connect with your followers.";
 		document.getElementById("profile-li").innerHTML =
-			"Profile-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"Gaming Influencers can now take their gaming content to the next level with PickMy link. With the platform's microsite, they can easily share all their gaming content in one place and engage with their followers on a deeper level.";
 		document.getElementById("brand-collab").innerHTML =
-			"Brand-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"A link in your bio can earn more for each game! Promote products from brands on your content or use an affiliate link on your microsite, either way your game will be upped!";
 		document.getElementById("brand-mobile").innerHTML =
-			"Brand-Mobile-Gammer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
-		document.getElementById("land-change").style.backgroundColor = "brown";
-		document.getElementById("land-mobile").style.backgroundColor = "brown";
+			"A link in your bio can earn more for each game! Promote products from brands on your content or use an affiliate link on your microsite, either way your game will be upped!";
+		document.getElementById("land-change").style.backgroundImage =
+			"linear-gradient(to left, #66a6ff, #89f7fe)";
+		document.getElementById("land-mobile").style.backgroundImage =
+			"linear-gradient(to left, #66a6ff, #89f7fe)";
 	}
 	if (type == "petfluencer") {
 		document.getElementById("image").src = "./images/petfluencer_brand.png";
@@ -178,13 +183,13 @@ function brandCollaboration(type) {
 		document.getElementById("influencer-list").innerHTML =
 			"Share your love for pets and build your pet-loving community.";
 		document.getElementById("profile-li").innerHTML =
-			"Profile-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"It's you or your pet, both can have a personalized ‘pet’ site to unleash all your content. Share it through PickMy.link’s specially designed platform and see your follower count grow as more people are exposed to your message.";
 		document.getElementById("brand-collab").innerHTML =
-			"Brand-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"At PickMy.Link, our goal is to make influencer marketing easier than ever before. Forget about spending hours trying to build relationships with brands - let PickMy.Link help make it easier for you!";
 		document.getElementById("brand-mobile").innerHTML =
-			"Brand-Mobile-PetInfluencer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
-		document.getElementById("land-change").style.backgroundColor = "#00c2cb";
-		document.getElementById("land-mobile").style.backgroundColor = "#00c2cb";
+			"At PickMy.Link, our goal is to make influencer marketing easier than ever before. Forget about spending hours trying to build relationships with brands - let PickMy.Link help make it easier for you!";
+		document.getElementById("land-change").style.backgroundColor = "#3d0b3e";
+		document.getElementById("land-mobile").style.backgroundColor = "#3d0b3e";
 	}
 	if (type == "trainer-coach") {
 		document.getElementById("image").src = "./images/trainer_brand.png";
@@ -192,13 +197,13 @@ function brandCollaboration(type) {
 		document.getElementById("influencer-list").innerHTML =
 			"Inspire and motivate others with your expert knowledge and skills.";
 		document.getElementById("profile-li").innerHTML =
-			"Profile-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"Hey Trainers and coaches, now you can focus on building your brand and engaging with your followers on a more personal level with our microsite. You can easily share all their content, training programs and services in one place and stand out from the competition.";
 		document.getElementById("brand-collab").innerHTML =
-			"Brand-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"Be part of the growing community with access to dozens of tools that help you to get collaborations, manage brand campaigns and monetize your content and stay connected with your clients.";
 		document.getElementById("brand-mobile").innerHTML =
-			"Brand-Mobile-Trainer platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
-		document.getElementById("land-change").style.backgroundColor = "#e58d05";
-		document.getElementById("land-mobile").style.backgroundColor = "#e58d05";
+			"Be part of the growing community with access to dozens of tools that help you to get collaborations, manage brand campaigns and monetize your content and stay connected with your clients.";
+		document.getElementById("land-change").style.backgroundColor = "#2e2d32";
+		document.getElementById("land-mobile").style.backgroundColor = "#2e2d32";
 	}
 	if (type == "foodie") {
 		document.getElementById("image").src = "./images/foodie_brand.png";
@@ -206,11 +211,11 @@ function brandCollaboration(type) {
 		document.getElementById("influencer-list").innerHTML =
 			"Share your culinary journeys and connect with food lovers.";
 		document.getElementById("profile-li").innerHTML =
-			"Profile-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"One-stop ideal platform for foodies to showcase your recipes, food reviews and cooking tips. With PickMy link's microsite, foodies can create a personalised hub for all their food-related content and stay connected with their followers in a more engaging way.";
 		document.getElementById("brand-collab").innerHTML =
-			"Brand-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"Build meaningful relationships with food brands in the most secure way! Collaboration with your favourite food brands";
 		document.getElementById("brand-mobile").innerHTML =
-			"Brand-Mobile-Foodie platform for creators and influencers who want to simplify their online presence. Sign up for free and add all your social links, website link, and any other URL to get your own Profile link";
+			"Build meaningful relationships with food brands in the most secure way! Collaboration with your favourite food brands";
 		document.getElementById("land-change").style.backgroundColor = "#ffd859";
 		document.getElementById("land-mobile").style.backgroundColor = "#ffd859";
 	}

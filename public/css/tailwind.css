@@ -1395,6 +1395,7 @@ iframe.code {
 }
 
 .land-lin p {
+  margin-right: 0px;
   margin-top: 0px;
   padding-top: 7px;
   font-size: 1rem;
@@ -1405,13 +1406,7 @@ iframe.code {
 
 @media (min-width: 768px) {
   .land-lin p {
-    max-width: 325px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .land-lin p {
-    max-width: 400px;
+    margin-right: 6rem;
   }
 }
 
