@@ -62,7 +62,8 @@ document.getElementById("scroll-app").onscroll = function () {
 	if (document.getElementById("scroll-app").scrollTop < 20) {
 		document.getElementById("land-change").style.backgroundImage =
 			"linear-gradient(to left, #f4d03f, #16a085)";
-		// document.getElementById("land-mobile").style.backgroundColor = "#ff98bd";
+		document.getElementById("land-mobile").style.backgroundImage =
+			"linear-gradient(to left, #f4d03f, #16a085)";
 		document.getElementById("brand-collaboration").style.marginTop = "119px";
 		document.getElementById("profile-link").style.opacity = 1;
 		document.getElementById("brand-collaboration").style.opacity = 0.5;
@@ -82,8 +83,8 @@ function profileLink(type) {
 			"Easily connect with brands for paid collaborations and promotions across socials. Finally that one platform for every creator's needs. Showcase your content, Sell more and track earnings, all this on your connected dashboard.";
 		document.getElementById("brand-mobile").innerHTML =
 			"Easily connect with brands for paid collaborations and promotions across socials. Finally that one platform for every creator's needs. Showcase your content, Sell more and track earnings, all this on your connected dashboard.";
-		document.getElementById("land-change").style.backgroundColor = "#ffa42b";
-		document.getElementById("land-mobile").style.backgroundColor = "#b71952";
+		document.getElementById("land-change").style.background = "#ffa42b";
+		document.getElementById("land-mobile").style.background = "#b71952";
 	}
 	if (type == "gammer") {
 		document.getElementById("image").src = "./images/gamer_links.png";
@@ -114,7 +115,7 @@ function profileLink(type) {
 			"At PickMy.Link, our goal is to make influencer marketing easier than ever before. Forget about spending hours trying to build relationships with brands - let PickMy.Link help make it easier for you!";
 		document.getElementById("land-change").style.backgroundImage =
 			"linear-gradient(to left, #ffb199, #e32c58)";
-		document.getElementById("land-mobile").style.backgroundColor = "#3d0b3e";
+		document.getElementById("land-mobile").style.background = "#3d0b3e";
 	}
 	if (type == "trainer-coach") {
 		document.getElementById("image").src = "./images/trainer_links.png";
@@ -129,7 +130,7 @@ function profileLink(type) {
 			"Be part of the growing community with access to dozens of tools that help you to get collaborations, manage brand campaigns and monetize your content and stay connected with your clients.";
 		document.getElementById("land-change").style.backgroundImage =
 			"linear-gradient(220deg, #d858cb, #7292f7)";
-		document.getElementById("land-mobile").style.backgroundColor = "#2e2d32";
+		document.getElementById("land-mobile").style.background = "#2e2d32";
 	}
 	if (type == "foodie") {
 		document.getElementById("image").src = "./images/foodie_links.png";
@@ -145,7 +146,7 @@ function profileLink(type) {
 		document.getElementById("land-change").style.backgroundImage =
 			"linear-gradient(to left, #00c9ff, #92fe9d)";
 		document.getElementById("land-mobile").style.backgroundImage =
-			"linear-gradient(to left, #00c9ff, #92fe9d)";
+			"linear-gradient(to left, #f4d03f, #16a085)";
 	}
 }
 
@@ -161,11 +162,10 @@ function brandCollaboration(type) {
 			"Easily connect with brands for paid collaborations and promotions across socials. Finally that one platform for every creator's needs. Showcase your content, Sell more and track earnings, all this on your connected dashboard.";
 		document.getElementById("brand-mobile").innerHTML =
 			"Easily connect with brands for paid collaborations and promotions across socials. Finally that one platform for every creator's needs. Showcase your content, Sell more and track earnings, all this on your connected dashboard.";
-		document.getElementById("land-change").style.backgroundColor = "#b71952";
-		document.getElementById("land-mobile").style.backgroundColor = "#b71952";
+		document.getElementById("land-change").style.background = "#b71952";
+		document.getElementById("land-mobile").style.background = "#b71952";
 	}
 	if (type == "gammer") {
-		console.log(type);
 		document.getElementById("image").src = "./images/gamer_brand.png";
 		document.getElementById("mv-image").src = "./images/gamer_links.png";
 		document.getElementById("influencer-list").innerHTML =
@@ -192,8 +192,8 @@ function brandCollaboration(type) {
 			"At PickMy.Link, our goal is to make influencer marketing easier than ever before. Forget about spending hours trying to build relationships with brands - let PickMy.Link help make it easier for you!";
 		document.getElementById("brand-mobile").innerHTML =
 			"At PickMy.Link, our goal is to make influencer marketing easier than ever before. Forget about spending hours trying to build relationships with brands - let PickMy.Link help make it easier for you!";
-		document.getElementById("land-change").style.backgroundColor = "#3d0b3e";
-		document.getElementById("land-mobile").style.backgroundColor = "#3d0b3e";
+		document.getElementById("land-change").style.background = "#3d0b3e";
+		document.getElementById("land-mobile").style.background = "#3d0b3e";
 	}
 	if (type == "trainer-coach") {
 		document.getElementById("image").src = "./images/trainer_brand.png";
@@ -206,8 +206,8 @@ function brandCollaboration(type) {
 			"Be part of the growing community with access to dozens of tools that help you to get collaborations, manage brand campaigns and monetize your content and stay connected with your clients.";
 		document.getElementById("brand-mobile").innerHTML =
 			"Be part of the growing community with access to dozens of tools that help you to get collaborations, manage brand campaigns and monetize your content and stay connected with your clients.";
-		document.getElementById("land-change").style.backgroundColor = "#2e2d32";
-		document.getElementById("land-mobile").style.backgroundColor = "#2e2d32";
+		document.getElementById("land-change").style.background = "#2e2d32";
+		document.getElementById("land-mobile").style.background = "#2e2d32";
 	}
 	if (type == "foodie") {
 		document.getElementById("image").src = "./images/foodie_brand.png";

@@ -17,6 +17,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				"regal-blue": "linear-gradient(to left, #00c9ff, #92fe9d)",
+				"regal-vlog": "linear-gradient(to left, #f4d03f, #16a085)",
 			},
 		},
 	},
