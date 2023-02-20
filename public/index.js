@@ -54,12 +54,14 @@ document.getElementById("scroll-app").onscroll = function () {
 	if (document.getElementById("scroll-app").scrollTop > 35) {
 		document.getElementById("profile-link").style.opacity = 0.5;
 		document.getElementById("brand-collaboration").style.opacity = 1;
-		document.getElementById("land-change").style.backgroundColor = "#45b9bc";
+		document.getElementById("land-change").style.backgroundImage =
+			"linear-gradient(to left, #f4d03f, #16a085)";
 		document.getElementById("brand-collaboration").style.marginTop = "100px";
 		brandCollaboration(renderImage);
 	}
 	if (document.getElementById("scroll-app").scrollTop < 20) {
-		document.getElementById("land-change").style.backgroundColor = "#ffd859";
+		document.getElementById("land-change").style.backgroundImage =
+			"linear-gradient(to left, #f4d03f, #16a085)";
 		// document.getElementById("land-mobile").style.backgroundColor = "#ff98bd";
 		document.getElementById("brand-collaboration").style.marginTop = "119px";
 		document.getElementById("profile-link").style.opacity = 1;
@@ -140,8 +142,10 @@ function profileLink(type) {
 			"Build meaningful relationships with food brands in the most secure way! Collaboration with your favourite food brands.";
 		document.getElementById("brand-mobile").innerHTML =
 			"Build meaningful relationships with food brands in the most secure way! Collaboration with your favourite food brands.";
-		document.getElementById("land-change").style.backgroundColor = "#ffd859";
-		document.getElementById("land-mobile").style.backgroundColor = "#ffd859";
+		document.getElementById("land-change").style.backgroundImage =
+			"linear-gradient(to left, #00c9ff, #92fe9d)";
+		document.getElementById("land-mobile").style.backgroundImage =
+			"linear-gradient(to left, #00c9ff, #92fe9d)";
 	}
 }
 
@@ -216,8 +220,10 @@ function brandCollaboration(type) {
 			"Build meaningful relationships with food brands in the most secure way! Collaboration with your favourite food brands";
 		document.getElementById("brand-mobile").innerHTML =
 			"Build meaningful relationships with food brands in the most secure way! Collaboration with your favourite food brands";
-		document.getElementById("land-change").style.backgroundColor = "#ffd859";
-		document.getElementById("land-mobile").style.backgroundColor = "#ffd859";
+		document.getElementById("land-change").style.backgroundImage =
+			"linear-gradient(to left, #f4d03f, #16a085)";
+		document.getElementById("land-mobile").style.backgroundImage =
+			"linear-gradient(to left, #f4d03f, #16a085)";
 	}
 }
 

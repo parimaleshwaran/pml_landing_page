@@ -15,6 +15,9 @@ module.exports = {
 				mf: "4px 4px 20px 0 rgb(15 15 15 / 10%), 0 0 4px 0 rgb(51 35 77 / 5%)",
 				kl: "0 0 0 rgba(204, 169, 44, 0.4)",
 			},
+			backgroundImage: {
+				"regal-blue": "linear-gradient(to left, #00c9ff, #92fe9d)",
+			},
 		},
 	},
 	plugins: [],

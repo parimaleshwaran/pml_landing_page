@@ -234,7 +234,7 @@ section {
 /* right side image */
 
 .land-vloger {
-	@apply bg-[#ffd859] md:rounded-[40px] rounded-[24px] w-full relative md:mt-0 mt-6;
+	@apply bg-regal-blue md:rounded-[40px] rounded-[24px] w-full relative md:mt-0 mt-6;
 }
 
 .land-vloger img {
