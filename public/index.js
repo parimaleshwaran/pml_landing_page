@@ -79,9 +79,9 @@ function profileLink(type) {
 		document.getElementById("profile-li").innerHTML =
 			"With PickMy.link, you can share your vlogs in unlimited ways on your personalised microsite. Engage with your followers, stay connected and earn money all in one place - for free, forever.";
 		document.getElementById("brand-collab").innerHTML =
-			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard. ofkhxmn pf yhpksl";
+			"Easily connect with brands for paid collaborations and promotions across socials. Finally that one platform for every creator's needs. Showcase your content, Sell more and track earnings, all this on your connected dashboard.";
 		document.getElementById("brand-mobile").innerHTML =
-			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard. okfymynso oksrtmhokdo";
+			"Easily connect with brands for paid collaborations and promotions across socials. Finally that one platform for every creator's needs. Showcase your content, Sell more and track earnings, all this on your connected dashboard.";
 		document.getElementById("land-change").style.backgroundColor = "#ffa42b";
 		document.getElementById("land-mobile").style.backgroundColor = "#b71952";
 	}
@@ -154,13 +154,13 @@ function brandCollaboration(type) {
 		document.getElementById("image").src = "./images/vlog_brand.png";
 		document.getElementById("mv-image").src = "./images/vlog_links.png";
 		document.getElementById("influencer-list").innerHTML =
-			"Share your latest adventures with the world in one link.Effortlessly Manage Links, Grow Presence.";
+			"Share your latest adventures with the world in one link.Effortlessly Manage Links,Grow Presence.";
 		document.getElementById("profile-li").innerHTML =
 			"With PickMy.link, you can share your vlogs in unlimited ways on your personalised microsite. Engage with your followers, stay connected and earn money all in one place - for free, forever.";
 		document.getElementById("brand-collab").innerHTML =
-			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard. kjdxhjrx kdrydho";
+			"Easily connect with brands for paid collaborations and promotions across socials. Finally that one platform for every creator's needs. Showcase your content, Sell more and track earnings, all this on your connected dashboard.";
 		document.getElementById("brand-mobile").innerHTML =
-			"Easily connect with brands for paid collaborations and promotions. Showcase sponsored content and track earnings on your connected dashboard. dtkljnsghkrj sjrnoj krbsjjr";
+			"Easily connect with brands for paid collaborations and promotions across socials. Finally that one platform for every creator's needs. Showcase your content, Sell more and track earnings, all this on your connected dashboard.";
 		document.getElementById("land-change").style.backgroundColor = "#b71952";
 		document.getElementById("land-mobile").style.backgroundColor = "#b71952";
 	}
