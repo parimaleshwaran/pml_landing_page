@@ -551,8 +551,17 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .block {
   display: block;
+}
+
+.grid {
+  display: grid;
 }
 
 .flex-shrink-0 {
@@ -1045,6 +1054,10 @@ section {
   }
 }
 
+.land-influ {
+  height: 300vh;
+}
+
 .land-vlog {
   display: flex;
   width: 100%;
@@ -1057,6 +1070,12 @@ section {
     flex-direction: row;
     gap: 2.5rem;
   }
+}
+
+.land-vlog {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px !important;
 }
 
 .land-a {
@@ -2898,7 +2917,6 @@ iframe.code {
 
 .mobile2 {
   display: none;
-  opacity: 0.5;
 }
 
 @media (min-width: 768px) {

@@ -14,6 +14,7 @@ for (let i = 0; i < influencerCategories.length; i++) {
 	const childDiv = document.createElement("div");
 	childDiv.innerHTML = influencerCategories[i].name;
 	childDiv.id = `select${i}`;
+	childDiv.className = `cate${i}`;
 	const img = document.createElement("img");
 	img.src = influencerCategories[i].imgUrl;
 	child.appendChild(img);
@@ -329,6 +330,24 @@ sections.forEach((sct, i) => {
 });
 
 function mobileViewScroll() {
+	const dropSection = document
+		.getElementById("drop-section")
+		.getBoundingClientRect();
+
+	console.log(dropSection.top);
+
+	if (dropSection.top > -200) {
+		console.log("hello");
+		document.getElementById("profile-link").style.display = "none";
+		document.getElementById("brand-collaboration").style.display = "block";
+		document.getElementById("brand-collaboration").style.marginTop = "180px";
+	}
+	if (dropSection.top > 10) {
+		document.getElementById("profile-link").style.display = "block";
+		document.getElementById("brand-collaboration").style.display == "none";
+		profileLink(renderImage);
+	}
+
 	if (isMobileView) {
 		const sectionOne = document
 			.getElementById("text-section-1")

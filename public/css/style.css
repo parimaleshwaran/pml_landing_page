@@ -178,8 +178,14 @@ section {
 	@apply md:mt-[73px] mt-10 lg:mx-[100px] md:mx-8 mx-4;
 }
 
+.land-influ {
+	height: 300vh;
+}
+
 .land-vlog {
 	@apply flex w-full md:gap-10 gap-0 md:flex-row flex-col;
+	position: sticky;
+	top: 15px !important;
 }
 
 .land-a {
@@ -916,7 +922,7 @@ iframe.code {
 }
 
 .mobile2 {
-	@apply md:block hidden opacity-50;
+	@apply md:block hidden;
 }
 
 .mobile-off {

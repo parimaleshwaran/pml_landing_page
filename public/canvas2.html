@@ -13,138 +13,169 @@
     #stage2 {
       width: 100%;
       height: 100vh !important;
-      box-sizing: border-box;
-      object-fit: none;
     }
   </style>
   <body>
     <canvas class="stage-cls" id="stage2"></canvas>
-    <script>
-      var stage = document.getElementById("stage2");
-      (cb = stage.getBoundingClientRect()),
-        (ctx = stage.getContext("2d")),
-        (ratio = window.devicePixelRatio || 1),
-        (mouse = {
-          x: 0,
-          y: 0,
-        }),
-        (dots = []),
-        (wide = 20),
-        (high = wide / 1.1),
-        (size = 40),
-        (padding = 50);
-      window.onmousemove = function (e) {
-        mouse.x = e.pageX * ratio;
-        mouse.y = e.pageY * ratio;
-      };
 
-      window.onresize = function () {
-        ctx.canvas.width = window.innerWidth * ratio;
-        ctx.canvas.height = window.innerHeight * ratio;
-        cb = stage.getBoundingClientRect();
-      };
-      window.onresize();
+		<script>
+			/*******************************************************************************
+Necessary Variables
+*******************************************************************************/
 
-      function create() {
-        var d = 20;
-        for (var i = -1; ++i < wide; ) {
-          var x =
-            Math.floor(((cb.width - padding * 2) / (wide - 1)) * i + padding) *
-            ratio;
+			var stage = document.querySelector("#stage2"),
+				cb = stage.getBoundingClientRect(),
+				ctx = stage.getContext("2d"),
+				ratio = window.devicePixelRatio || 1,
+				mouse = { x: 0, y: 0 },
+				dots = [],
+				wide = 20,
+				high = wide / 1.1,
+				size = 20,
+				padding = 10;
 
-          for (var j = -1; ++j < high; ) {
-            var y =
-              Math.floor(
-                ((cb.height - padding * 2) / (high - 1)) * j + padding
-              ) * ratio;
+			/*******************************************************************************
+Events
+*******************************************************************************/
 
-            dots.push({
-              x: x,
-              y: y,
-              ox: x,
-              oy: y,
-            });
-          }
-        }
-      }
+			window.onmousemove = function (e) {
+				mouse.x = e.pageX * ratio;
+				mouse.y = e.pageY * ratio;
+			};
 
-      create();
+			window.onresize = function () {
+				ctx.canvas.width = window.innerWidth * ratio;
+				ctx.canvas.height = window.innerHeight * ratio;
+				cb = stage.getBoundingClientRect();
+			};
 
-      function render() {
-        // clear the canvas
-        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-        // choose the dot color
-        ctx.fillStyle = "#fff";
-        // for each line
-        for (var i = 0; i < dots.length; i++) {
-          var s = dots[i];
-          var v = getV(s);
-          ctx.beginPath();
-          ctx.moveTo(s.x, s.y);
-          ctx.lineTo(s.x + v.x, s.y + v.y);
-          ctx.strokeStyle = "#fff";
-          ctx.lineWidth = 1 * ratio;
-          ctx.stroke();
-          ctx.closePath();
-        }
+			window.onresize();
 
-        // for each dot
-        for (var i = 0; i < dots.length; i++) {
-          var s = dots[i];
+			/*******************************************************************************
+Setup
+*******************************************************************************/
 
-          var v = getV(s);
+			function create() {
+				var d = 20;
+				for (var i = -1; ++i < wide; ) {
+					var x =
+						Math.floor(((cb.width - padding * 2) / (wide - 1)) * i + padding) *
+						ratio;
 
-          ctx.circle(s.x + v.x, s.y + v.y, s.size * ratio, true);
-          ctx.fill();
-        }
-      }
+					for (var j = -1; ++j < high; ) {
+						var y =
+							Math.floor(
+								((cb.height - padding * 2) / (high - 1)) * j + padding
+							) * ratio;
 
-      function getV(dot) {
-        var d = getDistance(dot, mouse);
-        dot.size = (200 - d) / 30;
-        dot.size = dot.size < 1 ? 1 : dot.size;
+						dots.push({
+							x: x,
+							y: y,
+							ox: x,
+							oy: y,
+						});
+					}
+				}
+			}
 
-        dot.angle = getAngle(dot, mouse);
+			create();
 
-        return {
-          x: (d > 10 ? 10 : d) * Math.cos((dot.angle * Math.PI) / 10),
-          y: (d > 10 ? 10 : d) * Math.sin((dot.angle * Math.PI) / 10),
-        };
-      }
+			/*******************************************************************************
+Rendering and frame calculations
+*******************************************************************************/
 
-      function getAngle(obj1, obj2) {
-        var dX = obj2.x - obj1.x;
-        var dY = obj2.y - obj1.y;
-        var angleDeg = (Math.atan2(dY, dX) / Math.PI) * 10;
-        return angleDeg;
-      }
+			function render() {
+				// clear the canvas
+				ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
-      function getDistance(obj1, obj2) {
-        var dx = obj1.x - obj2.x;
-        var dy = obj1.y - obj2.y;
-        return Math.sqrt(dx * dx + dy * dy);
-      }
-      CanvasRenderingContext2D.prototype.circle = function (x, y, r) {
-        this.beginPath();
-        this.arc(x, y, r, 0, 2 * Math.PI, false);
-        this.closePath();
-      };
-      window.requestAnimFrame = (function () {
-        return (
-          window.requestAnimationFrame ||
-          window.webkitRequestAnimationFrame ||
-          window.mozRequestAnimationFrame ||
-          function (callback) {
-            window.setTimeout(callback, 1000 / 60);
-          }
-        );
-      })();
+				// choose the dot color
+				ctx.fillStyle = "#fff";
 
-      (function animloop() {
-        render();
+				// for each line
+				for (var i = 0; i < dots.length; i++) {
+					var s = dots[i];
 
-        requestAnimationFrame(animloop);
-      })();
-    </script>
-  </body>
+					var v = getV(s);
+
+					ctx.beginPath();
+					ctx.moveTo(s.x, s.y);
+					ctx.lineTo(s.x + v.x, s.y + v.y);
+					ctx.strokeStyle = "#fff";
+					ctx.lineWidth = 1 * ratio;
+					ctx.stroke();
+					ctx.closePath();
+				}
+
+				// for each dot
+				for (var i = 0; i < dots.length; i++) {
+					var s = dots[i];
+
+					var v = getV(s);
+
+					ctx.circle(s.x + v.x, s.y + v.y, s.size * ratio, true);
+					ctx.fill();
+				}
+			}
+
+			function getV(dot) {
+				// find the distance from the line to the mouse
+				var d = getDistance(dot, mouse);
+
+				// reverse the distance, so that the number is bigger when the mouse is closer.
+				dot.size = (200 - d) / 20;
+				dot.size = dot.size < 1 ? 1 : dot.size;
+
+				dot.angle = getAngle(dot, mouse);
+
+				return {
+					x: (d > 20 ? 20 : d) * Math.cos((dot.angle * Math.PI) / 180),
+					y: (d > 20 ? 20 : d) * Math.sin((dot.angle * Math.PI) / 180),
+				};
+			}
+
+			function getAngle(obj1, obj2) {
+				var dX = obj2.x - obj1.x;
+				var dY = obj2.y - obj1.y;
+				var angleDeg = (Math.atan2(dY, dX) / Math.PI) * 180;
+				return angleDeg;
+			}
+
+			function getDistance(obj1, obj2) {
+				var dx = obj1.x - obj2.x;
+				var dy = obj1.y - obj2.y;
+				return Math.sqrt(dx * dx + dy * dy);
+			}
+
+			/*******************************************************************************
+Drawing circles
+*******************************************************************************/
+
+			CanvasRenderingContext2D.prototype.circle = function (x, y, r) {
+				this.beginPath();
+				this.arc(x, y, r, 0, 2 * Math.PI, false);
+				this.closePath();
+			};
+
+			/*******************************************************************************
+Animation Setup
+*******************************************************************************/
+
+			window.requestAnimFrame = (function () {
+				return (
+					window.requestAnimationFrame ||
+					window.webkitRequestAnimationFrame ||
+					window.mozRequestAnimationFrame ||
+					function (callback) {
+						window.setTimeout(callback, 1000 / 60);
+					}
+				);
+			})();
+
+			(function animloop() {
+				render();
+
+				requestAnimationFrame(animloop);
+			})();
+		</script>
+	</body>
 </html>
