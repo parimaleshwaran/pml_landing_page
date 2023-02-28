@@ -36,8 +36,10 @@ document.getElementById("brand-mobile").innerHTML =
 
 let renderImage = "foodie"; // Initialize Influencer Category
 document.getElementById("mainDiv").innerHTML = influencerCategories[0].name;
+console.log(document.getElementById("mainDiv").innerHTML);
 
 function changeCategory(index, value) {
+	console.log(value.slug);
 	document.getElementById(`select${index}`).addEventListener("click", () => {
 		document.getElementById("mainDiv").innerHTML = value.name;
 		renderImage = value.slug;
