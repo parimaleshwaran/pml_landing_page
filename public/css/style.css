@@ -193,7 +193,7 @@ section {
 }
 
 .vloger-head {
-	@apply md:sticky static top-0 z-10 bg-white flex md:items-center items-baseline md:flex-row flex-col;
+	@apply md:sticky static top-0 z-10 bg-white flex md:items-center items-baseline md:flex-row flex-col pb-2.5;
 }
 
 .vloger-head span {
@@ -233,7 +233,7 @@ section {
 }
 
 .vloger-choi {
-	@apply lg:text-2xl md:text-xl text-base font-semibold text-[#0f0f0f] md:sticky static md:top-[100px] top-0 md:mt-0 mt-2.5 md:pr-10 pr-0;
+	@apply lg:text-2xl md:text-xl bg-white text-base font-semibold text-[#0f0f0f] md:sticky static md:top-[100px] top-0 md:mt-0 mt-2.5 md:pr-10 pr-0;
 	margin-bottom: 0 !important;
 }
 
@@ -272,7 +272,7 @@ iframe.code {
 }
 
 .land-vloger iframe {
-	@apply relative z-10;
+	@apply relative z-10 rounded-[40px];
 }
 
 .test-vloger {
@@ -289,11 +289,11 @@ iframe.code {
 	@apply md:mt-[200px] mt-[36px];
 }
 
-.land-lin span {
+.locker__section h3 {
 	@apply lg:text-[40px] md:text-[30px] text-[40px] font-bold text-[#0f0f0f];
 }
 
-.land-lin p {
+.locker__section p {
 	@apply text-base font-medium text-[rgba(15,15,15,0.7)] pt-[7px] md:mr-24 mr-0 mt-0;
 	margin-bottom: 0 !important;
 	padding-right: 0 !important;
@@ -990,22 +990,25 @@ iframe.code {
 }
 
 .locker {
-	margin-top: 100px;
+	margin-top: 73px;
+	margin-left: 100px;
+	margin-right: 100px;
 	/* outline: 1px solid #cdcdcd; */
 	outline-offset: -1px;
 	position: relative;
-	display: grid;
-	grid-template-columns:
+	display: flex;
+	flex-direction: row-reverse;
+	/* grid-template-columns:
 		[full-start] minmax(0.1rem, 1fr) [center-start] repeat(
 			12,
 			[col-start] minmax(min-content, 8rem) [col-end]
 		)
-		[center-end] minmax(4.2rem, 1fr) [full-end];
+		[center-end] minmax(4.2rem, 1fr) [full-end]; */
 }
 .locker__image {
-	width: 660px;
+	width: 100%;
 	position: relative;
-	grid-column: col-start 2 / col-end 6;
+	/* grid-column: col-start 2 / col-end 6; */
 }
 .locker__image img {
 	width: auto;
@@ -1023,7 +1026,8 @@ iframe.code {
 	justify-content: center;
 }
 .locker__content {
-	grid-column: col-start 8 / center-end;
+	width: 100%;
+	/* grid-column: col-start 8 / center-end; */
 }
 .locker__section {
 	height: 100vh;
@@ -1035,9 +1039,9 @@ iframe.code {
 .locker__section:first-child {
 	border: none;
 }
-.locker__section p {
+/* .locker__section p {
 	width: 70%;
-}
+} */
 
 #message {
 	position: fixed;
