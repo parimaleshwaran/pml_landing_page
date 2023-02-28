@@ -1094,7 +1094,7 @@ section {
   }
 }
 
-.land-a span {
+.vloger-head span {
   font-size: 40px;
   font-weight: 700;
   --tw-text-opacity: 1;
@@ -1102,13 +1102,13 @@ section {
 }
 
 @media (min-width: 768px) {
-  .land-a span {
+  .vloger-head span {
     font-size: 30px;
   }
 }
 
 @media (min-width: 1024px) {
-  .land-a span {
+  .vloger-head span {
     font-size: 60px;
   }
 }
@@ -3014,7 +3014,7 @@ iframe.code {
 
 .locker {
   margin-top: 100px;
-  outline: 1px solid #cdcdcd;
+  /* outline: 1px solid #cdcdcd; */
   outline-offset: -1px;
   position: relative;
   display: grid;
@@ -3064,7 +3064,7 @@ iframe.code {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border-top: 1px solid #cdcdcd;
+  /* border-top: 1px solid #cdcdcd; */
 }
 
 .locker__section:first-child {

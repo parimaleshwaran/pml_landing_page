@@ -196,7 +196,7 @@ section {
 	@apply md:sticky static top-0 z-10 bg-white flex md:items-center items-baseline md:flex-row flex-col;
 }
 
-.land-a span {
+.vloger-head span {
 	@apply text-[#0f0f0f] lg:text-[60px] md:text-[30px] text-[40px] font-bold;
 }
 
@@ -991,7 +991,7 @@ iframe.code {
 
 .locker {
 	margin-top: 100px;
-	outline: 1px solid #cdcdcd;
+	/* outline: 1px solid #cdcdcd; */
 	outline-offset: -1px;
 	position: relative;
 	display: grid;
@@ -1030,7 +1030,7 @@ iframe.code {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	border-top: 1px solid #cdcdcd;
+	/* border-top: 1px solid #cdcdcd; */
 }
 .locker__section:first-child {
 	border: none;
