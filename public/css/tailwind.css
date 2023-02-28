@@ -3097,3 +3097,23 @@ iframe.code {
   margin: auto;
   margin-top: 60px;
 }
+
+.locker__image {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .locker__image {
+    display: block;
+  }
+}
+
+.cate-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .cate-mobile {
+    display: none;
+  }
+}

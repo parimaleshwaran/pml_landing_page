@@ -1062,3 +1062,9 @@ iframe.code {
 	margin: auto;
 	margin-top: 60px;
 }
+.locker__image {
+	@apply md:block hidden;
+}
+.cate-mobile {
+	@apply md:hidden block;
+}

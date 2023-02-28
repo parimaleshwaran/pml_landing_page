@@ -2,11 +2,11 @@ let isMobileView = window.innerWidth <= 425;
 
 // Influencer Categories
 const influencerCategories = [
-	{ slug: "foodie", name: "Foodie", imgUrl: "" },
-	{ slug: "vlogger", name: "Vlogger", imgUrl: "" },
-	{ slug: "gammer", name: "Gammer", imgUrl: "" },
-	{ slug: "petfluencer", name: "Petfluencer", imgUrl: "" },
-	{ slug: "trainer-coach", name: "Trainer / Coach", imgUrl: "" },
+	{ slug: "foodie", name: "Foodie", imgUrl: "",imgName:'foodie' },
+	{ slug: "vlogger", name: "Vlogger", imgUrl: "" ,imgName:'vlog'},
+	{ slug: "gammer", name: "Gammer", imgUrl: "",imgName:'gamer' },
+	{ slug: "petfluencer", name: "Petfluencer", imgUrl: "",imgName:"petfluencer" },
+	{ slug: "trainer-coach", name: "Trainer / Coach", imgUrl: "",imgName:'trainer' },
 ];
 
 for (let i = 0; i < influencerCategories.length; i++) {
@@ -40,6 +40,7 @@ let renderImage = "foodie"; // Initialize Influencer Category
 document.getElementById("mainDiv").innerHTML = influencerCategories[0]?.name;
 function changeCategory(index, value) {
 	document.getElementById(`select${index}`).addEventListener("click", () => {
+		mobileCategorysetImage(value.imgName)
 		profileLink(value.slug);
 		document.getElementById("mainDiv").innerHTML = value.name;
 		renderImage = value.slug;
@@ -523,4 +524,49 @@ function imageChange() {
 
 function setCanvasBg(color) {
 	document.getElementById("land-change").style.background = color;
+}
+function mobileCategorysetImage(category){
+	let color1='';
+		let color2='';
+		let color3='';
+		switch(category){
+			case 'foodie':
+				color1='green';
+				color2='red';
+				color3='pink';
+				break;
+			case 'vlog':
+				color1='red';
+				color2='green';
+				color3='blue';
+				break;
+			case 'gamer':
+				color1='black'
+				color2='brown'
+				color3='pink'
+				break;
+			case 'petfluencer':
+				color1=''
+				color2=''
+				color3=''
+				break;
+			case 'trainer':
+				color1=''
+				color2=''
+				color3=''
+				break;
+		}
+
+		document.getElementById(`canvas-mob1`).style.background=color1;
+		// document.getElementById(`canvas-mob2`).style.background=color2;
+		// document.getElementById(`canvas-mob3`).style.background=color3;
+	for(i=1;i<=3;i++){
+		const imageTag=document.getElementById(`mob-img${i}`);
+		if(i===1)
+		imageTag.src=`./images/${category}_links.png`;
+		else if(i===2)
+		imageTag.src=`./images/${category}_brand.png`;
+		else if(i===3)
+		imageTag.src=`./images/${category}_links.png`;
+	}
 }
