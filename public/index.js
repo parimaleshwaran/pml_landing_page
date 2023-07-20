@@ -238,9 +238,9 @@ const amount = document.getElementById("amount");
 
 const setValue = () => {
 	const newValue = Number(
-			((followersRange.value - followersRange.min) * 100) /
-				(followersRange.max - followersRange.min)
-		),
+		((followersRange.value - followersRange.min) * 100) /
+		(followersRange.max - followersRange.min)
+	),
 		newPosition = 16 - newValue * 0.32;
 	let range1 = "";
 	if (followersRange.value >= 1000000)
@@ -261,9 +261,9 @@ const setValue = () => {
 
 const setValue2 = () => {
 	const newValue = Number(
-			((monthlyPostRange.value - monthlyPostRange.min) * 100) /
-				(monthlyPostRange.max - monthlyPostRange.min)
-		),
+		((monthlyPostRange.value - monthlyPostRange.min) * 100) /
+		(monthlyPostRange.max - monthlyPostRange.min)
+	),
 		newPosition = 16 - newValue * 0.32;
 	followers.innerHTML = `<span>${monthlyPostRange.value}</span>`;
 	amount.innerHTML = `<span>${monthlyPostRange.value}</span>`;
@@ -322,7 +322,7 @@ sections.forEach((sct, i) => {
 		start: () =>
 			"top top-=" +
 			(sct.offsetLeft - window.innerWidth / 2) *
-				(maxWidth / (maxWidth - window.innerWidth)),
+			(maxWidth / (maxWidth - window.innerWidth)),
 		end: () =>
 			"+=" + sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
 		toggleClass: { targets: sct, className: "active" },
@@ -333,9 +333,6 @@ function mobileViewScroll() {
 	const dropSection = document
 		.getElementById("drop-section")
 		.getBoundingClientRect();
-
-	console.log(dropSection.top);
-
 	if (dropSection.top > -200) {
 		console.log("hello");
 		document.getElementById("profile-link").style.display = "none";
